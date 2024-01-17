@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
+
+body{
+    color:black;
+    background-color:black;
+}
+
+.navbar-brand{
+    font-family:'Parisienne', cursive;
+    color:black;
+    font-size: 2rem;
+}
+
+.btn-outline-dark{
+    border-width: 1px;
+}
+
+.form-inline{
+    display:inline-block;
+}
+
+.nav-link {
+    color:black;
+}
