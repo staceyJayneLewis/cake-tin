@@ -1,8 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
 
+html{
+    height: 100%;
+}
+
 body{
     color:black;
-    background-color:black;
 }
 
 .navbar-brand{
@@ -11,6 +14,7 @@ body{
     font-size: 2rem;
 }
 
+/* header */
 .btn-outline-dark{
     border-width: 1px;
 }
@@ -22,3 +26,29 @@ body{
 .nav-link {
     color:black;
 }
+
+.header-container{
+    padding-top: 70px;
+}
+
+.callout{
+    height: calc(100vh - 70px);
+    background-color:white;
+}
+
+.first-column{
+    padding-top:30%;
+    padding-bottom: 30%;
+}
+
+.carousel-item > img {
+    height: 665px;
+    object-fit: cover;
+}
+
+@media screen and (min-width: 768px) {
+    .first-column{
+        padding-top:0;
+        padding-bottom: 0;
+    }
+  }
