@@ -42,10 +42,31 @@ body{
 }
 
 .carousel-item > img {
-    height: 665px;
+    height: 667px;
     object-fit: cover;
 }
 
+footer{
+    background-color:lightgrey;
+    padding: 1rem;
+}
+
+footer ul{
+    list-style-type: none;
+    text-align: center;
+}
+
+footer ul li a {
+    color:black;
+}
+
+footer ul li a:hover {
+    color:#6F0821;
+    text-decoration: none;
+    font-weight:600;
+}
+
+/* Media queries */
 @media screen and (min-width: 768px) {
     .first-column{
         padding-top:0;
