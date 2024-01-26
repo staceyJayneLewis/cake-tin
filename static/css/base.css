@@ -28,11 +28,11 @@ body{
 }
 
 .header-container{
-    padding-top: 70px;
+    padding-top: 65px;
 }
 
 .callout{
-    height: calc(100vh - 70px);
+    height: calc(100vh - 65px);
     background-color:white;
 }
 
@@ -42,7 +42,7 @@ body{
 }
 
 .carousel-item > img {
-    height: 667px;
+    height: 672px;
     object-fit: cover;
 }
 
