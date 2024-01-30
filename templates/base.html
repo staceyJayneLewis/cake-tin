@@ -52,8 +52,8 @@
                       <a class="nav-link" href="#">Contact Us</a>
                   </li>
               </ul>
-              <form class="form-inline mr-lg-3">
-                <input class="form-control bg-white text-dark btn-outline-dark mr-1" type="search" placeholder="Search products" aria-label="Search">
+              <form class="form-inline mr-lg-3" method="GET" action="{% url 'all_products' %}">
+                <input class="form-control bg-white text-dark btn-outline-dark mr-1" type="search" name="q" placeholder="Search products" aria-label="Search">
                 <button class="btn bg-dark text-white mt-2 mt-md-0" type="submit">Search</button>
               </form>
             <ul class="navbar-nav">
