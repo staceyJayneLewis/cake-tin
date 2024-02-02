@@ -11,22 +11,16 @@ https://ui.dev/amiresponsive?url=https://socialeyes-1884ceb59a89.herokuapp.com
 
 ![screenshot](documentation/amiresponsivemockup.png)
 
-Below you can see the charts I created to visualise the flow of the website and any error messages or actions needed depending on the user interaction. You can see on the charts I have worked out what data needs to be collected or added to the database depending on user interaction and what error messages need to be put in place incase of an unexpected/incorrect response.
+Below you can see the charts and user stories I created to visualise the flow of the website and any error messages or actions needed depending on the user interaction. You can see on the charts I have worked out what data needs to be collected or added to the database depending on user interaction and what error messages need to be put in place incase of an unexpected/incorrect response.
 
 <details>
-<summary> Click here to see data flow charts </summary>
+<summary> Click here to see data flow charts and user stories</summary>
 
-Home
-  - ![screenshot](documentation/wireframes/mobile-home.png)
+Flow Charts
+  - ![screenshot](documentation/flow-chart.jpg)
 
-About
-  - ![screenshot](documentation/wireframes/mobile-about.png)
-
-Contact
-  - ![screenshot](documentation/wireframes/mobile-contact.png)
-
-Gallery
-  - ![screenshot](documentation/wireframes/mobile-gallery.png)
+User Stories
+  - ![screenshot](documentation/User-stories.jpg)
 
 </details>
 
