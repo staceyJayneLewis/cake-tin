@@ -84,18 +84,17 @@
                 </li>
               {% endif %}
                 <li class="nav-item">
-                  <a class="{% if grand_total %}text-info font-weight-bold{% endif %} nav-link"
-                    href="">
-                      <i class="fa-solid fa-bag-shopping fa-lg"></i>
-                      <p class="my-0">
-                        {% if grand_total %}
-                          ${{ grand_total|floatformat:2 }}
-                        {% else %}
-                          £0.00
-                        {% endif %}
-                      </p>
+                  <a class="{% if grand_total %}text-info font-weight-bold{% endif %} nav-link" href="{% url 'basket' %}">
+                    <i class="fa-solid fa-basket-shopping"></i>
+                    <p class="my-0">
+                      {% if grand_total %}
+                      ${{ grand_total|floatformat:2 }}
+                      {% else %}
+                      £0.00
+                      {% endif %}
+                    </p>
                   </a>
-                </li> 
+                </li>
             </ul>
           </div>
       </nav>
