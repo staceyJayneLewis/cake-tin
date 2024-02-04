@@ -31,6 +31,7 @@ body{
     padding-top: 65px;
 }
 
+/* home page */
 .callout{
     height: calc(100vh - 65px);
     background-color:white;
@@ -46,6 +47,22 @@ body{
     object-fit: cover;
 }
 
+/* products page */
+.price {
+    font-size: 1.3rem;
+}
+
+/* product description */
+#nutrition > button:hover,
+#allergen > button:hover {
+    font-weight:500;
+}
+
+#basket-page{
+    height: calc(100vh - 65px);
+}
+
+/* footer */
 footer{
     background-color:lightgrey;
     padding: 1rem;

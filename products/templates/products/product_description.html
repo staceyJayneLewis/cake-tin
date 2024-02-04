@@ -3,31 +3,85 @@
 
 {% block page_header %}
     <div class="header-container">
-    </div>``
+    </div>
 {% endblock %}
 
 {% block content %}
-<div class="container">
-    <div class="row mb-5 mx-2">
-        <!-- Product image -->
+<div class="container description-container">
+    <div class="row mx-2 py-5">
         <div class="col-12 col-md-6 text-center">
             <div class="product-image-container">
                 {% if product.image %}
-                    <a href="{{ product.image.url }}" target="_blank">
-                        <img src="{{ product.image.url }}" class="img-fluid" alt="{{ product.name }}" target="_blank">
-                    </a>
+                <a href="{{ product.image.url }}" target="_blank">
+                    <img src="{{ product.image.url }}" class="img-fluid" alt="{{ product.name }}" target="_blank">
+                </a>
                 {% else %}
-                    <a href="{{ product.image.url }}" target="_blank">
-                        <img src="{{ MEDIA_URL }}no_image.png" class="img-fluid" alt="{{ product.name }}">
-                    </a>
+                <a href="{{ product.image.url }}" target="_blank">
+                    <img src="{{ MEDIA_URL }}no_image.png" class="img-fluid" alt="{{ product.name }}">
+                </a>
                 {% endif %}
             </div>
+               <!-- accordion -->
+            <div class="accordion my-5" id="product-info">
+                <div class="card">
+                    <div class="card-header" id="nutrition">
+                        <button class="btn btn-block collapsed" type="button" data-toggle="collapse"
+                            data-target="#nutrition-details" aria-expanded="true">
+                            Nutritional Information
+                        </button>
+                    </div>
+                    <div id="nutrition-details" class="collapse" data-parent="#product-info">
+                        <div class="card-body">
+                            {{ product.nutritional }}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header" id="allergen">
+                        <button class="btn btn-block collapsed" type="button" data-toggle="collapse"
+                            data-target="#allergen-details" aria-expanded="true">
+                            Allergen Information
+                        </button>
+                    </div>
+                    <div id="allergen-details" class="collapse" data-parent="#product-info">
+                        <div class="card-body">
+                            {{ product.allergen }}
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+
+
         <!-- Product description -->
-        <div class="col-12 col-md-6 pt-4 my-auto">
-            <p class="display-4">{{ product.name }}</p>
-            <p class="lead">{{ product.description }}</p>
-            <p class="price">£{{ product.price }}</p>
+        <div class="col-12 col-md-6">
+            <form class="form" action="{% url 'add_to_basket' product.id %}" method="POST">
+                {% csrf_token %}
+                <div class="form-row">
+                    <div class="col-12">
+                        <h3>{{ product.name }}</h3>
+                        <p class="lead">{{ product.description }}</p>
+                        <p class="price">£{{ product.price }}</p>
+                        <p class="mt-3"><strong>Select box size</strong></p>
+                        <select class="custom-select">
+                            <option value="6" selected>Box of 6</option>
+                            <option value="12">Box of 12</option>
+                            <option value="24">Box of 24</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="col-12">
+                    <a href="{% url 'all_products' %}" class="btn mt-5">
+                        <i class="fa-solid fa-arrow-left"></i>
+                        <span class="mx-2">Continue Shopping</span>
+                    </a>
+                    <input type="submit" class="btn rounded mt-5 px-5 bg-success text-white"
+                        value="Add to basket">
+                </div>
+                <input type="hidden" name="redirect_url" value="{{ request.path }}">
+            </form>
         </div>
     </div>
 </div>
