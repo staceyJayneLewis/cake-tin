@@ -27,59 +27,18 @@ User Stories
 
 ## UX
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-In this section, you will briefly explain your design processes.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+The Cake Tin is a simple interactive website that is user-friendly and easy to use as it has a wide age range of target audience. The website has been repsponsivley designed meaning it is user-friendly for online, tablet and mobile users. This standard structure design means it can also be easily developed further in the future and has the potential to add many more features to it without the site looking overcrowded. It's a smooth journey from the begining of the customers journey to the end, making it as easy as 3 simple click the product they would like to the basket. The products are sectioned into categories so users find it easily to refind their search depending what they are looking for and also for the site owner to easily section their new products and special offers that they have. Ohter features such as links, buttons, simple forms and hover effects have all been included into the design to help the smooth user experience through the website. 
 
 ### Colour Scheme
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-Explain your colours and the colour scheme.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+Minimal helps create a product-focus web look since it keeps elements to the minimum with many white spaces, which makes sure the user's focus is on the products. Therefore, the main colours throughtout the site are black and white leaving the colourful and eye catching photography to add colour to the website to focus on the purpose of the website which is to sell the cakes. The black colour is also used to inform or guide the users to the primary information or buttons they are looking for such as search inputs, brand logo, headings but also to the information we want the user to be drawn to. For the images I have used similar photography shots for each cake so they can be seen as a collection, for example the 'Winter Collection' all have the same photography style so its easy for the user to differentiate between the collection range and the normal range, particularly when user select 'All products' but also to look effective when seen in together as a collective.   
 
 - `#000000` used for primary text.
-- `#E84610` used for primary highlights.
-- `#4A4A4F` used for secondary text.
-- `#009FE3` used for secondary highlights.
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+I used [coolors.co](https://coolors.co/d3d3d3-343a40-000000-ffffff) to generate my colour palette.
 
-Consider adding a link and screenshot for your colour scheme using "coolors".
-https://coolors.co/generate
+![screenshot](documentation/coolors.jpg)
 
-When you add a colour to the palette, the URL is dynamically updated, making it easier for you to return back to your colour palette later if needed.
-
-Example:
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-I used [coolors.co](https://coolors.co/e84610-009fe3-4a4a4f-445261-d63649-e6ecf0-000000) to generate my colour palette.
-
-![screenshot](documentation/coolors.png)
-
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-If you've used CSS `:root` variables, consider also including a code snippet here!
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-I've used CSS `:root` variables to easily update the global colour scheme by changing only one value, instead of everywhere in the CSS file.
-
-```css
-:root {
-    /* P = Primary | S = Secondary */
-    --p-text: #000000;
-    --p-highlight: #E84610;
-    --s-text: #4A4A4F;
-    --s-highlight: #009FE3;
-    --white: #FFFFFF;
-    --black: #000000;
-}
-```
 
 ### Typography
 
