@@ -1,1 +1,1 @@
-web: gunicorn cake-tin.wsgi:application
+web: gunicorn cake_tin.wsgi:application
