@@ -1,4 +1,4 @@
-# [CAKE TIN](Add heroku link HERE)
+# [CAKE TIN](https://cake-tin-c51245f8ed0d.herokuapp.com/)
 
 The aim of Cake Tin is to sell cupcakes online so that customers can easily purchase what they want online aswell as instore. 
 The site owners aim is to scale up the business and sell to customers locally but also further a field to produce more sales and customers for the business. 
@@ -7,7 +7,7 @@ be able to travel to the store to purchase.
 
 The second aim of the website is to use the website as a way to advertise the USP of the cupcakes which are that all ingredients are from local suppliers to support the community businesses such as the milk and eggs from the local farmers etc. 
 
-https://ui.dev/amiresponsive?url=https://socialeyes-1884ceb59a89.herokuapp.com
+https://ui.dev/amiresponsive?url=https://cake-tin-c51245f8ed0d.herokuapp.com/
 
 ![screenshot](documentation/amiresponsivemockup.png)
 
@@ -42,9 +42,7 @@ I used [coolors.co](https://coolors.co/d3d3d3-343a40-000000-ffffff) to generate 
 
 ### Typography
 
-- [Montserrat](https://fonts.google.com/specimen/Montserrat) was used for the primary headers and titles.
-
-- [Lato](https://fonts.google.com/specimen/Lato) was used for all other secondary text.
+- [Parisienne](https://fonts.google.com/specimen/Parisienne) was used for the logo.
 
 - [Font Awesome](https://fontawesome.com) icons were used throughout the site, such as the social media icons in the footer.
 
@@ -52,27 +50,35 @@ I used [coolors.co](https://coolors.co/d3d3d3-343a40-000000-ffffff) to generate 
 
 ### New Site Users
 
-- As a new site user, I would like to ____________, so that I can ____________.
-- As a new site user, I would like to ____________, so that I can ____________.
-- As a new site user, I would like to ____________, so that I can ____________.
-- As a new site user, I would like to ____________, so that I can ____________.
-- As a new site user, I would like to ____________, so that I can ____________.
+- As a new site user, I would like to register for an account, so that I can have my own account.
+- As a new site user, I would like to receive an email confirmation after signing up, so that I can be certain I am signed up.
+- As a new site user, I would like to create a secure password, so that I can be assured my account is secure.
+- As a new site user, I would like to view the selection of cakes, so that I can see what the product looks like.
+- As a new site user, I would like to see a product description page, so that I can see the price, product description, image and nutrition & allergy details.
+- As a new site user, I would like to easily see offer or sale products, so that I can get a good deal which may persuade me to be a returning customer.
+- As a new site user, I would like to easily search for a particular cake, so that I do not have to scroll through each product to get to what I am looking for. 
+- As a new site user, I would like to easily be able to select a quantity of cakes, so that I know how much exactly I am purchasing. 
+- As a new site user, I would like to easily be able to view items in my bag that I can check what I am purchasing again before payment.
+- As a new site user, I would like to receive and view and order confirmation email so that I can verify my order is complete.
+- As a new or existing site user I would like to be able to enter payment details so I can simply purchase the good I would like.
 
 ### Returning Site Users
 
-- As a returning site user, I would like to ____________, so that I can ____________.
-- As a returning site user, I would like to ____________, so that I can ____________.
-- As a returning site user, I would like to ____________, so that I can ____________.
-- As a returning site user, I would like to ____________, so that I can ____________.
-- As a returning site user, I would like to ____________, so that I can ____________.
+- As a returning site user, I would like to simply log in and log out, so that I can easily access my profile page.
+- As a returning site user, I would like to have my own profile, so that I can save payment information and view order history.
+- As a returning site user, I would like to recover my password if I have forgotten it, so that I can gain access back to my account.
+- As a returning site user, have visual sight of my shopping basket , so that I can keep track of the total amount I am spending to make sure it is affordable for me.
+- As a returning site user, I would like to see a list of categories of cake types, so that I can easily navigate to the product I want such a new collection or offers and sales.
+- As a returning site user, I would like to view recent searches, so that I don't have to go searching for a product I purchased previously or have to retype the product each time.
+- As a returning site user, I would like to know my payment details are stored securely so that I can be reassured when I add my details. 
 
 ### Site Admin
 
-- As a site administrator, I should be able to ____________, so that I can ____________.
-- As a site administrator, I should be able to ____________, so that I can ____________.
-- As a site administrator, I should be able to ____________, so that I can ____________.
-- As a site administrator, I should be able to ____________, so that I can ____________.
-- As a site administrator, I should be able to ____________, so that I can ____________.
+- As a site administrator, I should be able to add new products, so that I can add new items to my store.
+- As a site administrator, I should be able to edit products, so that I can edit any items that need amending such a price etc.
+- As a site administrator, I should be able to delete products, so that I can remove any products no longer on sale.
+- As a site administrator, I should be able to section products into categories, so that I can organise the products to make it m
+- As a site administrator, I should be able to easily manage my account, so that I can keep the website up to date.
 
 ## Wireframes
 
@@ -101,48 +107,50 @@ Contact
 
 ## Features
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-In this section, you should go over the different parts of your project,
-and describe each in a sentence or so.
-
-You will need to explain what value each of the features provides for the user,
-focusing on who this website is for, what it is that they want to achieve,
-and how your project is the best way to help them achieve these things.
-
-For some/all of your features, you may choose to reference the specific project files that implement them.
-
-IMPORTANT: Remember to always include a screenshot of each individual feature!
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
 ### Existing Features
 
-- **Title for feature #1**
+- **Navbar #1**
 
     - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
 
 ![screenshot](documentation/feature01.png)
 
-- **Title for feature #2**
+- **Logo #2**
 
     - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
 
 ![screenshot](documentation/feature02.png)
 
-- **Title for feature #3**
+- **Carousel #3**
 
     - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
 
 ![screenshot](documentation/feature03.png)
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+- **Callout heading and button #4**
 
-Repeat as necessary for as many features as your site contains.
+    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
 
-Hint: the more, the merrier!
+![screenshot](documentation/feature03.png)
 
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+- **Footer #5**
+
+    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+
+![screenshot](documentation/feature03.png)
+
+- **Category dropdown #6**
+
+    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+
+![screenshot](documentation/feature03.png)
+
+- **Product cards #7**
+
+    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+
+![screenshot](documentation/feature03.png)
+
 
 ### Future Features
 
@@ -273,7 +281,7 @@ For all testing, please refer to the [TESTING.md](TESTING.md) file.
 
 🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
 
-The live deployed application can be found deployed on [Heroku](https://socialeyes-1884ceb59a89.herokuapp.com).
+The live deployed application can be found deployed on [Heroku](https://cake-tin-c51245f8ed0d.herokuapp.com/).
 
 ### ElephantSQL Database
 
@@ -429,7 +437,7 @@ As a backup, in case users prematurely close the purchase-order page during paym
 
 - From your Stripe dashboard, click **Developers**, and select **Webhooks**.
 - From there, click **Add Endpoint**.
-	- `https://socialeyes-1884ceb59a89.herokuapp.com/checkout/wh/`
+	- `https://cake-tin-c51245f8ed0d.herokuapp.com/checkout/wh/`
 - Click **receive all events**.
 - Click **Add Endpoint** to complete the process.
 - You'll have a new key here:
