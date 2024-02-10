@@ -12,8 +12,8 @@ def basket_order(request):
 
     for item, quantity in basket_session.items():
         product = get_object_or_404(Product, pk=item)
-        total += quantity * product_price
-        product_count += quantity
+        order_total += quantity * product.price
+        number_of_items += quantity
         basket_items.append({
             'item': item,
             'quantity': quantity,
