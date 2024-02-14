@@ -1,16 +1,19 @@
 from django.contrib import admin
 from .models import Product, Category
 
-# Register your models here.
 class ProductAdmin(admin.ModelAdmin):
+    readonly_fields = ("image_preview",)
     list_display = (
         'name',
-        'category',
+        'get_categories',
         'price',
-        'image',
+        'image_preview',
     )
 
     ordering = ('name',)
+
+    def get_categories(self, obj):
+        return ", ".join([c.name for c in obj.category.all()])
 
 class CategoryAdmin(admin.ModelAdmin):
     list_display = (
