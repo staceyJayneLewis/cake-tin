@@ -192,4 +192,4 @@ if 'USE_AWS' in os.environ:
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-STANDARD_DELIVERY = 10
+STANDARD_DELIVERY = 2.49

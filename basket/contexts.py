@@ -6,31 +6,30 @@ from products.models import Product
 def basket_order(request):
 
     basket_items = []
-    order_total = 0
-    number_of_items = 0
+    sub_total = 0
+    total_number_of_items = 0
     basket_session = request.session.get('basket_session', {})
 
     for item, quantity in basket_session.items():
         product = get_object_or_404(Product, pk=item)
-        order_total += quantity * product.price
-        number_of_items += quantity
+        sub_total += quantity * product.price
+        total_number_of_items += quantity
         basket_items.append({
             'item': item,
             'quantity': quantity,
             'product':product,
         })
 
+    delivery = Decimal(settings.STANDARD_DELIVERY)
 
-    delivery = order_total * Decimal(settings.STANDARD_DELIVERY / 100)
-
-    grand_total = order_total + delivery
+    order_total = sub_total + delivery
 
     context = {
         'basket_items': basket_items,
-        'order_total': order_total,
-        'number_of_items': number_of_items,
+        'sub_total': sub_total,
+        'total_number_of_items': total_number_of_items,
         'delivery': delivery,
-        'grand_total': grand_total,
+        'order_total': order_total,
     }
 
     return context
