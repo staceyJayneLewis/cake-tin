@@ -5,6 +5,7 @@ html{
 }
 
 body{
+    height: 100%;
     color:black;
 }
 
@@ -33,7 +34,6 @@ body{
 
 /* home page */
 .callout{
-    height: calc(100vh - 65px);
     background-color:white;
 }
 
@@ -69,8 +69,8 @@ footer{
 }
 
 footer ul{
-    list-style-type: none;
     text-align: center;
+    list-style-type: none;
 }
 
 footer ul li a {
