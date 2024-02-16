@@ -15,30 +15,39 @@
                 <table class="table">
                     <thead>
                         <th>Product</th>
-                        <th></th>
                         <th>Quantity</th>
                         <th>Price</th>
+                        <th>Subtotal</th>
                     </thead>
                     <tbody>
                     {% for items in basket_items %}
                         <tr>
                             <td class="w-25">
                                 <img src="{{ items.product.image.url }}" class="img-fluid">
-                            </td>
-                            <td>
                                 {{ items.product.name }}
                             </td>
                             <td class="w-25">
-                                {{ items.quantity }}
+                                <form class="form form-update" method="POST" action="{% url 'amend_basket' items.item %}">
+                                    {% csrf_token %}
+                                    <div class="input">
+                                        <input class="form-control" type="number" name="quantity" value="{{ items.quantity }}" min="1" max="99" data-item_id="{{ items.item_id }}" id="id_qty_{{ items.item_id }}">
+                                    </div>
+                                </form>
+                                <a class="update-btn text-info">Update</a>
+                                <a class="remove-btn float-right text-danger" id="remove_{{ items.item }}">Remove</a>
                             </td>
                             <td>
                                 {{ items.product.price }}
+                            </td>
+                            <td>
+                                {{ sub_total }}
                             </td>
                         </tr>
                     {% endfor %}
                     </tbody>
                 </table>
             {% else %}
+                <hr>
                 <h4 class="pt-3">Your basket is empty.</h4>
             {% endif %}
         </div>
@@ -54,4 +63,31 @@
         </div>
     </div>
 </div>
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+
+<script type="text/javascript">
+    // Update quantity on click
+    $('.update-btn').click(function (e) {
+        var form = $(this).prev('.form-update');
+        form.submit();
+    })
+
+    // Remove item and reload on click
+    $('.remove-btn').click(function (e) {
+        var csrfToken = "{{ csrf_token }}";
+        var itemId = $(this).attr('id').split('remove_')[1];
+        var url = `/basket/remove/${itemId}/`;
+        var data = {
+            'csrfmiddlewaretoken': csrfToken,
+        };
+
+        $.post(url, data)
+            .done(function () {
+                location.reload();
+            });
+    })
+</script>
 {% endblock %}
