@@ -33,8 +33,8 @@
                                         <input class="form-control" type="number" name="quantity" value="{{ items.quantity }}" min="1" max="99" data-item_id="{{ items.item_id }}" id="id_qty_{{ items.item_id }}">
                                     </div>
                                 </form>
-                                <a class="update-btn text-info">Update</a>
-                                <a class="remove-btn float-right text-danger" id="remove_{{ items.item }}">Remove</a>
+                                <a class="update-btn text-info cursor">Update</a>
+                                <a class="remove-btn float-right text-danger cursor" id="remove_{{ items.item }}">Remove</a>
                             </td>
                             <td>
                                 {{ items.product.price }}
