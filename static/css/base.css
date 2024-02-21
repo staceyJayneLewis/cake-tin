@@ -32,6 +32,21 @@ body{
     padding-top: 65px;
 }
 
+.toast-container{
+    position: fixed;
+    top: 65px;
+    right: 15px;
+    z-index:999999999;
+}
+
+.toast{
+    overflow: visible;
+}
+
+.cursor{
+    cursor: pointer;
+}
+
 /* home page */
 .callout{
     background-color:white;
