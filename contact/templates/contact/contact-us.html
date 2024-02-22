@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+
+{% block page_header %}
+<div class="header-container">
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="form-container container-fluid">
+    <div class="row">
+        <section class="contact-info col-12 col-lg-6 my-auto">
+            <h4 class="text-center">Any questions? Speak to our dedicated team that will be happy to help!</h4>
+            <br>
+            <div class="row">
+                <div class="col text-right">
+                    <h5>Contact Number</h5>
+                </div>
+                <div class="col">01792 083456</div>
+            </div>
+            <div class="row">
+                <div class="col text-right">
+                    <h5>Social Media</h5>
+                </div>
+                <div class="col">
+                    <i class="fa-brands fa-facebook px-2"></i>
+                    <i class="fa-brands fa-instagram pr-2"></i>
+                    <i class="fa-brands fa-square-x-twitter"></i>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col text-right">
+                    <h5>Email</h5>
+                </div>
+                <div class="col">
+                    contact@caketin.com
+                </div>
+            </div>
+            <br>
+            <div class="opening-info text-center">
+                <h5>Our Customer service hours are:</h5>
+                <p>
+                    <strong>Monday - Saturday:</strong> 7am - 9.30pm<br>
+                    <strong>Sunday:</strong> 8am - 8pm.<br>
+                    <p class="small">If you need help outside of these hours please leave us a voicemail or an email and we will try to
+                    get back in touch as soon as we can.</p>
+                </p>
+            </div>
+        </section>
+
+        <section class="form-section col-12 col-lg-6 text-center my-auto">
+            <h5>Get in touch here.. Piece of Cake!</h5>
+            <p class="text-muted small">*required field</p>
+            <form method="POST" action="">
+                <div class="form-group m-3">
+                    <label for="name" class="col-form-label">Full Name:</label>
+                    <input type="text" class="form-control" id="name"><br>
+                    <small class="text-muted">*required</small>
+                </div>
+                <div class="form-group">
+                    <label for="email" class="col-form-label">Email:</label>
+                    <input type="email" class="form-control" id="email" required>
+                    <small class="text-muted">*required</small>
+                </div>
+                <div class="form-group">
+                    <label for="number" class="col-form-label">Contact Number:</label>
+                    <input type="number" class="form-control" id="number">
+                </div>
+                <div class="message-area mb-3">
+                    <label for="message">Message:<br></label>
+                    <textarea class="form-control" id="message" placeholder="Enter message here"></textarea>
+                    <small class="text-muted">*required</small>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn px-4 active alert-success">Send</button>
+                </div>
+            </form>
+        </section>
+    </div>
+</div>
+{% endblock %}
