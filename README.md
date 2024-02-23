@@ -593,6 +593,7 @@ There are currently no differences between the local version and the live deploy
 | [Chris Beams](https://chris.beams.io/posts/git-commit) | version control | "How to Write a Git Commit Message" |
 | [Programiz](https://www.programiz.com/python-programming/args-and-kwargs)| Refresher on how to use args and kwargs |
 | [Django Documentation](https://docs.djangoproject.com/en/5.0/topics/db/aggregation/) | Help to understand how aggregation works to use on the checkout model |
+| [NKMK](https://note.nkmk.me/en/python-tuple-single-empty/) | Helped me find the answer of using a single element in a tuple |
 
 ### Media
 
