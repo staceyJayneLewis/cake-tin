@@ -602,6 +602,9 @@ There are currently no differences between the local version and the live deploy
 | [Pexels](https://www.pexels.com) | entire site | image | favicon on all pages |
 | [Unsplash](https://unsplash.com) | product page | image | sample of fake products |
 | [TinyPNG](https://tinypng.com) | entire site | image | tool for image compression |
+| [Vecteezy](https://www.vecteezy.com/vector-art/5043127-a-phone-icon-in-a-round-circle-vector) | Contact Page | image | icon for contact page |
+| [Seekicon](https://seekicon.com/free-icon/location-outline_1) | Contact Page | image | icon for contact page |
+| [Icon Packs](https://www.iconpacks.net/free-icon/mail-142.html) | Contact Page | image | icon for contact page |
 
 ### Acknowledgements
 
