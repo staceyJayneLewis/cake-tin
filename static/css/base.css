@@ -99,8 +99,13 @@ footer ul li a:hover {
 }
 
 /* Contact Page */
-.opening-info{
-    font-size: 1.1rem;
+.contact-info{
+    height: 100vh;
+    background-color:#F3F3F3;
+}
+
+.card{
+    background-color:#F3F3F3;
 }
 
 /* Media queries */
@@ -112,10 +117,5 @@ footer ul li a:hover {
 
     .form-section{
         padding: 4rem;
-    }
-
-    .contact-info{
-        padding: 3rem;
-
     }
   }
