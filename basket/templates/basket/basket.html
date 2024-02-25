@@ -10,31 +10,37 @@
 <div id="basket-page" class="container pt-5">
     <div class="row" >
         <div class="col-12 col-md-8">
-            <h3>Checkout</h3>
+            <h3>Your basket</h3>
             {% if basket_items %}
                 <table class="table">
                     <thead>
-                        <th>Product</th>
-                        <th>Quantity</th>
-                        <th>Price</th>
-                        <th>Subtotal</th>
+                        <tr>
+                            <th>Product</th>
+                            <th>Quantity</th>
+                            <th>Price</th>
+                            <th>Subtotal</th>
+                        </tr>
                     </thead>
                     <tbody>
-                    {% for items in basket_items %}
+                        {% for items in basket_items %}
                         <tr>
                             <td class="w-25">
                                 <img src="{{ items.product.image.url }}" class="img-fluid">
                                 {{ items.product.name }}
                             </td>
                             <td class="w-25">
-                                <form class="form form-update" method="POST" action="{% url 'amend_basket' items.item %}">
+                                <form class="form form-update" method="POST"
+                                    action="{% url 'amend_basket' items.item %}">
                                     {% csrf_token %}
                                     <div class="input">
-                                        <input class="form-control" type="number" name="quantity" value="{{ items.quantity }}" min="1" max="99" data-item_id="{{ items.item_id }}" id="id_qty_{{ items.item_id }}">
+                                        <input class="form-control" type="number" name="quantity"
+                                            value="{{ items.quantity }}" min="1" max="99"
+                                            data-item_id="{{ items.item_id }}" id="id_qty_{{ items.item_id }}">
                                     </div>
                                 </form>
                                 <a class="update-btn text-info cursor">Update</a>
-                                <a class="remove-btn float-right text-danger cursor" id="remove_{{ items.item }}">Remove</a>
+                                <a class="remove-btn float-right text-danger cursor"
+                                    id="remove_{{ items.item }}">Remove</a>
                             </td>
                             <td>
                                 {{ items.product.price }}
@@ -43,7 +49,17 @@
                                 {{ sub_total }}
                             </td>
                         </tr>
-                    {% endfor %}
+                        {% endfor %}
+                        <tr>
+                            <td colspan="4" class="text-right">
+                                <a href="{% url 'all_products' %}" class="btn pr-4">
+                                    <i class="fa-solid fa-arrow-left pr-2"></i><span>Continue Shopping</span>
+                                </a>
+                                <a href="{% url 'checkout' %}" class="btn px-4 bg-success text-uppercase text-white">
+                                    <span>Checkout</span>
+                                </a>
+                            </td>
+                        </tr>
                     </tbody>
                 </table>
             {% else %}
