@@ -15,13 +15,13 @@ body{
     font-size: 2rem;
 }
 
+.search-input{
+    display: inline-block;
+}
+
 /* header */
 .btn-outline-dark{
     border-width: 1px;
-}
-
-.form-inline{
-    display:inline-block;
 }
 
 .nav-link {
@@ -88,6 +88,11 @@ footer ul{
     list-style-type: none;
 }
 
+footer ul li {
+    display: inline-block;
+    padding-right: 1rem;
+}
+
 footer ul li a {
     color:black;
 }
@@ -100,12 +105,27 @@ footer ul li a:hover {
 
 /* Contact Page */
 .contact-info{
-    height: 100vh;
+    padding-top: 3rem;
     background-color:#F3F3F3;
 }
 
-.card{
+.card-deck > .card{
+    width:50%;
     background-color:#F3F3F3;
+    margin: 0 auto;
+}
+
+.form-section{
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+}
+
+.email-card{
+    padding-top: 2.2rem;
+}
+
+.email-title{
+    padding-top: 1.3rem;
 }
 
 /* Media queries */
@@ -115,7 +135,21 @@ footer ul li a:hover {
         padding-bottom: 0;
     }
 
+    .contact-info{
+        text-align: center;
+        height: calc(100vh - 70px);
+        padding-top: 0;
+    }
+
+    .card-deck{
+        padding:7rem;
+    }
+
     .form-section{
-        padding: 4rem;
+        padding-bottom: 0;
+    }
+
+    footer ul{
+        margin:0;
     }
   }
