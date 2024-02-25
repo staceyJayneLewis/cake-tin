@@ -59,7 +59,7 @@
                       <a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
                   </li>
               </ul>
-              <form class="form-inline mr-lg-3" method="GET" action="{% url 'all_products' %}">
+              <form class="form-inline search-input mr-lg-3" method="GET" action="{% url 'all_products' %}">
                 <input class="form-control bg-white text-dark btn-outline-dark mr-1" type="search" name="q" placeholder="Search products" aria-label="Search">
                 <button class="btn bg-dark text-white mt-2 mt-md-0" type="submit">Search</button>
               </form>
@@ -125,27 +125,21 @@
 
     {% block footer %}
     <footer>
-      <div class="row">
-        <div class="col-12 col-md-4">
+      <div class="row text-center">
+        <div class="col-12 col-md-6">
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Our Products</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="https://www.facebook.com/" target="_blank" rel="noopener"><i
+                  class="fa-brands fa-facebook"></i></a></li>
+            <li><a href="https://twitter.com/" target="_blank" rel="noopener"><i class="fa-brands fa-x-twitter"></i></a>
+            </li>
+            <li><a href="https://www.instagram.com/" target="_blank" rel="noopener"><i
+                  class="fa-brands fa-instagram"></i></a></li>
+            <li><a href="https://www.youtube.com/" target="_blank" rel="noopener"><i
+                  class="fa-brands fa-youtube"></i></a></li>
           </ul>
         </div>
-        <div class="col-12 col-md-4">
-          <ul>
-            <li><a href="#">FAQ's</a></li>
-            <li><a href="#">Delivery</a></li>
-            <li><a href="#">Terms & Conditions</a></li>
-          </ul>
-        </div>
-        <div class="col-12 col-md-4">
-          <ul>
-            <li><a href="#">Facebook</a></li>
-            <li><a href="#">Twitter</a></li>
-            <li><a href="#">Instragram</a></li>
-          </ul>
+        <div class="col-12 col-md-6">
+          Cake Tin © 2024| All Rights Reserved
         </div>
       </div>
     </footer>
