@@ -22,7 +22,7 @@ def all_products(request):
             search_request = request.GET['q']
             if not search_request:
                 messages.error(request, "You didn't enter a product to search, please enter the product you are searching for.")
-                return redirect(reverse('products'))
+                return redirect(reverse('all_products'))
 
             search_requests = Q(name__icontains=search_request) | Q(description__icontains=search_request)
             products = products.filter(search_requests)
