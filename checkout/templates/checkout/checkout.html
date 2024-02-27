@@ -7,21 +7,53 @@
 {% endblock %}
 
 {% block content %}
-<div id="basket-page" class="container pt-5">
+<div id="basket-page" class="container py-5">
     <div class="row">
-        <div class="col">
+        <div class="col-12 col-md-6">
+            <h3>Checkout & Delivery</h3>
             <hr>
-            <h2>Checkout</h2>
+        </div>
+        <div class="col-12 col-md-6">
+            <h3>Payment Details</h3>
             <hr>
         </div>
     </div>
-    <div id="basket-page" class="container pt-5">
+    <div id="basket-page" class="container">
         <div class="row">
-            <div class="col">
-               <p>Please enter your details below:</p>
-               <form action="{% url 'checkout' %}" method="POST" id="checkout-form">
-                {% csrf_token %}
-               </form>
+            <div class="col-12 col-md-6">
+                <p>Please enter your delivery details below:</p>
+                <form action="{% url 'checkout' %}" method="POST" id="checkout-form">
+                    {% csrf_token %}
+                    {{ order_request | crispy }}
+                    <div id="save-details" class="save-details pt-1">
+                        {% if user.is_authenticated %}
+                        <label class="form-check-label" for="save-details-checkbox">Save details for future
+                            orders</label>
+                        <input class="form-check-input ml-2 mr-0" type="checkbox" id="save-details-checkbox"
+                            name="save-details" checked>
+                        {% else %}
+                        <label class="form-check-label" for="id-save-info">
+                            <a href="{% url 'account_login' %}">Sign in</a> to save your information or
+                            <a href="{% url 'account_signup' %}">Register</a> here
+                        </label>
+                        {% endif %}
+                    </div>
+                </form>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="payment-details"></div>
+                    <p><strong>Order total:</strong> {{ order_total | floatformat:2 }} (incl. delivery)</p>
+                <div class="submit-btn">
+                    <a href="{% url 'basket' %}" class="btn pr-4">
+                        <span class="icon">
+                            <i class="fas fa-arrow-left pr-1"></i>
+                        </span>
+                        <span>Return to basket</span>
+                    </a>
+                    <button id="submit-btn" class="btn bg-success text-white">
+                        <span>Complete order</span>
+                    </button>
+                </div>
             </div>
         </div>
     </div>
