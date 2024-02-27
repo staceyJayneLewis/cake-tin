@@ -5,7 +5,10 @@ html{
 }
 
 body{
-    height: 100%;
+    /* the following code was copied from DEV as refrenced in sources */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
     color:black;
 }
 
@@ -77,6 +80,7 @@ body{
 footer{
     background-color:lightgrey;
     padding: 1rem;
+    margin-top: auto;
 }
 
 footer ul{
