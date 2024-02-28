@@ -12,6 +12,7 @@
     <div class="row">
         <div class="col-12 col-md-6">
             <h4>Checkout & Delivery</h4>
+            <hr>
             <p>Please enter your delivery details below:</p>
             <form action="{% url 'checkout' %}" method="POST" id="checkout-form">
                 {% csrf_token %}
@@ -35,9 +36,11 @@
             <!-- Payment details -->
             <h4>Payment Details</h4>
             <hr>
-            <div class="payment-details"></div>
-            <p><strong>Order total:</strong> {{ order_total | floatformat:2 }} (incl. delivery)</p>
-            <div class="submit-btn">
+            <p>Enter card payment details here:</p>
+            <div id="payment-details"></div>
+            <div id="card-error-message"></div>
+            <p class="pt-3"><strong>Order total:</strong> {{ order_total | floatformat:2 }} (incl. delivery)</p>
+            <div class="submit-btn pt-3">
                 <a href="{% url 'basket' %}" class="btn pr-4">
                     <span class="icon">
                         <i class="fas fa-arrow-left pr-1"></i>
@@ -55,27 +58,8 @@
 {% endblock %}
 
 {% block postloadjs %}
-{{ block.super }}
-<script type="text/javascript">
-    // Update quantity on click
-    $('.update-btn').click(function (e) {
-        var form = $(this).prev('.form-update');
-        form.submit();
-    })
-
-    // Remove item and reload on click
-    $('.remove-btn').click(function (e) {
-        var csrfToken = "{{ csrf_token }}";
-        var itemId = $(this).attr('id').split('remove_')[1];
-        var url = `/basket/remove/${itemId}/`;
-        var data = {
-            'csrfmiddlewaretoken': csrfToken,
-        };
-
-        $.post(url, data)
-            .done(function () {
-                location.reload();
-            });
-    })
-</script>
+    {{ block.super }}
+    {{ stripe_public_key|json_script:"id_stripe_public_key" }}
+    {{ client_secret_key|json_script:"id_client_secret_key" }}
+    <script src="{% static 'checkout/js/stripe_elements.js' %}"></script>
 {% endblock %}
