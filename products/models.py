@@ -25,6 +25,9 @@ class Product(models.Model):
     image = models.ImageField(null=True, blank=True)
     nutritional = models.TextField(null=True)
     allergen = models.TextField(null=True)
+    # sale item
+    is_on_sale = models.BooleanField(default=False)
+    sale_price = models.DecimalField(default=0, decimal_places=2, max_digits=6 )
 
     def image_preview(self):
         from django.utils.html import format_html
