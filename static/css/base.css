@@ -70,6 +70,10 @@ body{
     font-size: 1.3rem;
 }
 
+.badge{
+    position:absolute;
+}
+
 /* product description */
 #nutrition > button:hover,
 #allergen > button:hover {

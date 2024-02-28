@@ -17,15 +17,23 @@
                     All Cupcakes
                 {% endif %}
             </h2>
+            <p>{% if current_category %}
+                <p>Choose from our delicious {{ current_category.display_name }}selection.</p>
+            {% else %}
+                <p>Choose from our various different range of delicious cupcakes.</p>
+            {% endif %}</p>
         </div>
     </div>
     <div class="row">
-        <div class="product-container col-10 offset-1 mb-4">
+        <div class="product-container col-10 offset-1">
             <div class="row mt-3">
-                <!-- individual cards for each product -->
+                <!-- individual card for each product -->
                 {% for product in products %}
                 <div class="col-sm-6 col-md-6 col-lg-4 p-3">
                     <div class="card h-100 p-3 text-center shadow">
+                        {% if product.is_on_sale %}
+                            <span class="badge badge-danger p-2 m-2">SALE</span>
+                        {% endif %}
                         {% if product.image %}
                             <a href="{% url 'product_description' product.id %}">
                                 <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
@@ -36,14 +44,25 @@
                                     alt="{{ product.name }}">
                             </a>
                         {% endif %}
-                        <div class="card-body pb-0">
-                            <p class="mb-0">{{ product.name }}</p>
-                        </div>
+                            <div class="card-body pb-0">
+                                <p class="mb-0">{{ product.name }}</p>
+                            </div>
+                        <!-- Item on sale -->
+                        {% if product.is_on_sale %}
+                            <div class="row">
+                                <div class="col">
+                                    <p class="mb-0 price text-danger">
+                                        <strike><small>£{{ product.price }}</small></strike><span
+                                            class="pl-2 text-dark">£{{ product.sale_price }}</span></p>
+                                </div>
+                            </div>
+                        {% else %}
                             <div class="row">
                                 <div class="col">
                                     <p class="mb-0 price">£{{ product.price }}</p>
                                 </div>
                             </div>
+                        {% endif %}
                     </div>
                 </div>
                 {% endfor %}
