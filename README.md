@@ -593,8 +593,10 @@ There are currently no differences between the local version and the live deploy
 | [Chris Beams](https://chris.beams.io/posts/git-commit) | version control | "How to Write a Git Commit Message" |
 | [Programiz](https://www.programiz.com/python-programming/args-and-kwargs)| Refresher on how to use args and kwargs |
 | [Django Documentation](https://docs.djangoproject.com/en/5.0/topics/db/aggregation/) | Help to understand how aggregation works to use on the checkout model |
+| [Stripe Docs](https://docs.stripe.com/) | Help to understand how to set up the start of the stripe payments process |
 | [NKMK](https://note.nkmk.me/en/python-tuple-single-empty/) | Helped me find the answer of using a single element in a tuple |
 | [DEV](https://dev.to/nehalahmadkhan/how-to-make-footer-stick-to-bottom-of-web-page-3i14) | Helped to fix the footer to the bottom of the page when the page height is less than the full viewport |
+| [stackoverflow](https://stackoverflow.com/questions/16307307/django-admin-show-image-from-imagefield/16307554#16307554) | Showed me how to display the product image on the admin |
 
 ### Media
 
