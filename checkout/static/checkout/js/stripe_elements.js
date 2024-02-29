@@ -24,11 +24,46 @@ card.mount('#payment-details');
 
 // Display error message if error occurs for card details //
 card.addEventListener('change', function(event){
-    let errorMessage = document.getElementById('#card-error-message');
-    if (event.error){
-        let html = `${event.error.message}`;
+    var errorMessage = document.getElementById('#card-error-message');
+    if (event.error) {
+        var html = `
+            <span class="icon" role="alert">
+                <i class="fas fa-times"></i>
+            </span>
+            <span>${event.error.message}</span>
+        `;
         $(errorMessage).html(html);
     } else {
-        errorMessage.textContent = "";
+        errorMessage.textContent = '';
     }
+});
+
+// On submit handle form // 
+var form = document.getElementById('#checkout-form');
+
+form.addEventListener('submit', function (event) {
+    event.preventDefault();
+    card.update({
+        'disabled': true
+    });
+    $('#submit-btn').attr('disabled', true);
+    stripe.confirmCardPayment(clientSecret, {
+        payment_method: {
+            card: card,
+        }
+    }).then(function (result) {
+        if (result.error) {
+            let errorMessage = document.getElementById('#card-error-message');
+            let html = `${result.error.message}`;
+            $(errorMessage).html(html);
+            card.update({
+                'disabled': false
+            });
+            $('#submit-btn').attr('disabled', false);
+        } else {
+            if (result.paymentIntent.status === 'succeeded') {
+                form.submit();
+            }
+        }
+    });
 });
