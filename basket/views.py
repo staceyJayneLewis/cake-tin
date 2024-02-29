@@ -17,10 +17,9 @@ def add_to_basket(request, item):
 
     if item in list(basket_session.keys()):
         basket_session[item] += quantity
-
     else:
         basket_session[item] = quantity
-        messages.success(request, f'{product.name} added successfully to the basket!')
+    messages.success(request, f'{quantity}x {product.name} added successfully to the basket!')
 
     request.session['basket_session'] = basket_session
     return redirect(redirect_url)

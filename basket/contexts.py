@@ -13,7 +13,10 @@ def basket_order(request):
 
     for item, quantity in basket_session.items():
         product = get_object_or_404(Product, pk=item)
-        sub_total += quantity * product.price
+        if product.is_on_sale:
+            sub_total += quantity * product.sale_price
+        else:
+            sub_total += quantity * product.price
         total_number_of_items += quantity
         basket_items.append({
             'item': item,
