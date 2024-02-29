@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load basket_tools %}
 
 {% block page_header %}
     <div class="header-container">
@@ -46,7 +47,7 @@
                                 {{ items.product.price }}
                             </td>
                             <td>
-                                {{ sub_total }}
+                                {{ items.product.price | calculate_subtotal:items.quantity }}
                             </td>
                         </tr>
                         {% endfor %}
@@ -65,18 +66,19 @@
             {% else %}
                 <hr>
                 <h4 class="pt-3">Your basket is empty.</h4>
+                <a href="{% url 'all_products' %}" class="btn pr-4">
+                    <i class="fa-solid fa-arrow-left pr-2"></i><span>Continue Shopping</span>
+                </a>
             {% endif %}
         </div>
-        <div class="col-12 col-md-4">
-            <h3 class="pb-3">Order Summary</h3>
-            <tr>
-                <td>
+        {% if basket_items %}
+            <div class="col-12 col-md-4">
+                <h3 class="pb-3">Order Summary</h3>
                     <p>Subtotal: £{{ sub_total|floatformat:2 }}</p>
-                    <p>Delivery: £{{ delivery|floatformat:2 }}</ps>
+                    <p>Delivery: £{{ delivery|floatformat:2 }}</p>
                     <h5><strong class="mr-2">Order Total:</strong>£{{ order_total|floatformat:2 }}</h5>
-                </td>
-            </tr>
-        </div>
+            </div>
+        {% endif %}
     </div>
 </div>
 {% endblock %}
