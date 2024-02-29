@@ -46,26 +46,9 @@
         <section class="form-section col-12 col-lg-5 text-center">
             <h5>Get in touch here.. Piece of Cake!</h5>
             <p class="text-muted small">*required field</p>
-            <form method="POST" action="">
-                <div class="form-group m-3">
-                    <label for="name" class="col-form-label">Full Name:</label>
-                    <input type="text" class="form-control" id="name">
-                    <small class="text-muted">*required</small>
-                </div>
-                <div class="form-group m-3">
-                    <label for="email" class="col-form-label">Email:</label>
-                    <input type="email" class="form-control" id="email" required>
-                    <small class="text-muted">*required</small>
-                </div>
-                <div class="form-group m-3">
-                    <label for="number" class="col-form-label">Contact Number:</label>
-                    <input type="number" class="form-control" id="number">
-                </div>
-                <div class="message-area m-3">
-                    <label for="message">Message:<br></label>
-                    <textarea class="form-control" id="message" placeholder="Enter message here"></textarea>
-                    <small class="text-muted">*required</small>
-                </div>
+            <form method="POST" action="{% url 'contact' %}">
+                {% csrf_token %}
+                {{ form | crispy }}
                 <div class="form-group pt-4">
                     <button type="submit" class="btn btn-lg bg-dark text-white px-5 active">Send</button>
                 </div>
