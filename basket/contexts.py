@@ -8,6 +8,7 @@ def basket_order(request):
     basket_items = []
     sub_total = 0
     total_number_of_items = 0
+
     basket_session = request.session.get('basket_session', {})
 
     for item, quantity in basket_session.items():
@@ -17,7 +18,7 @@ def basket_order(request):
         basket_items.append({
             'item': item,
             'quantity': quantity,
-            'product':product,
+            'product': product,
         })
 
     delivery = Decimal(settings.STANDARD_DELIVERY)
