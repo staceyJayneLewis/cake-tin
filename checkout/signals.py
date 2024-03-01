@@ -9,7 +9,8 @@ def update_save(sender, instance, created, **kwargs):
     instance.order.order_total_update()
 
 @receiver(post_delete, sender=Item_ordered)
-def update_save(sender, instance, **kwargs):
-    """Amend order total when item deleted """
+def update_delete(sender, instance, **kwargs):
+    """delete order total when item deleted """
     
+    print('delete signal received!')
     instance.order.order_total_update()
