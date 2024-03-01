@@ -598,6 +598,7 @@ There are currently no differences between the local version and the live deploy
 | [DEV](https://dev.to/nehalahmadkhan/how-to-make-footer-stick-to-bottom-of-web-page-3i14) | Helped to fix the footer to the bottom of the page when the page height is less than the full viewport |
 | [stackoverflow](https://stackoverflow.com/questions/16307307/django-admin-show-image-from-imagefield/16307554#16307554) | Showed me how to display the product image on the admin |
 | [stackoverflow](https://stackoverflow.com/questions/46021463/heroku-giving-500-error-with-little-information-internal-server-error) | helped to figure out how to use heroku logs -t to check the internal server error |
+| [stackoverflow](https://stackoverflow.com/questions/65581489/uncaught-in-promise-integrationerror-invalid-value-for-stripe-confirmcardpaym) | helped understand what the stripe intent error could be |
 
 ### Media
 
