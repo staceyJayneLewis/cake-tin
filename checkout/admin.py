@@ -2,13 +2,13 @@ from django.contrib import admin
 from .models import Order_details, Item_ordered
 
 
-class Item_ordered__admin_inline(admin.TabularInline):
+class Item_ordered_admin_inline(admin.TabularInline):
     model = Item_ordered
     readonly_fields = ('item_ordered_total',)
 
 
 class Order_admin(admin.ModelAdmin):
-    inlines = (Item_ordered__admin_inline,)
+    inlines = (Item_ordered_admin_inline,)
     readonly_fields = (
         'order_number', 'sub_total', 'order_total', 'delivery', 'date'
     )
