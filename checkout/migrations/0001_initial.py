@@ -17,7 +17,7 @@ class Migration(migrations.Migration):
             name='Order_details',
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('order_number', models.CharField(editable=False, max_length=30)),
+                ('order_number', models.CharField(editable=False, max_length=100)),
                 ('full_name', models.CharField(max_length=50)),
                 ('email', models.EmailField(max_length=254)),
                 ('contact_number', models.CharField(max_length=20)),

@@ -8,7 +8,7 @@ class Order_details(models.Model):
     class Meta: 
         verbose_name_plural = 'Orders'
 
-    order_number = models.CharField(max_length=30, null=False, editable=False)
+    order_number = models.CharField(max_length=100, null=False, editable=False)
     full_name = models.CharField(max_length=50, null=False, blank=False)
     address_line_1 = models.CharField(max_length=80, null=False, blank=False)
     address_line_2 = models.CharField(max_length=80, null=True, blank=True)
@@ -47,7 +47,7 @@ class Order_details(models.Model):
 
 class Item_ordered(models.Model):   
     class Meta: 
-        verbose_name_plural = 'Orders'
+        verbose_name_plural = 'Items'
 
     order = models.ForeignKey(Order_details, null=False, blank=False, on_delete=models.CASCADE, related_name='items_ordered')
     product = models.ForeignKey(Product, null=False, blank=False, on_delete=models.CASCADE)
