@@ -1,5 +1,5 @@
 var stripe_public_key = $('#id_stripe_public_key').text().slice(1, -1);
-var client_secret_key = $('#id_client_secret_key').text().slice(1, -1);
+var client_secret = $('#id_client_secret').text().slice(1, -1);
 var stripe = Stripe(stripe_public_key);
 var elements = stripe.elements();
 
@@ -24,7 +24,7 @@ card.mount('#payment-details');
 
 // Display error message if error occurs for card details //
 card.addEventListener('change', function(event){
-    var errorMessage = document.getElementById('#card-error-message');
+    var errorMessage = document.getElementById('card-error-message');
     if (event.error) {
         var html = `
             <span class="icon" role="alert">
@@ -39,7 +39,7 @@ card.addEventListener('change', function(event){
 });
 
 // On submit handle form // 
-var form = document.getElementById('#checkout-form');
+var form = document.getElementById('checkout-form');
 
 form.addEventListener('submit', function (event) {
     event.preventDefault();
@@ -47,13 +47,13 @@ form.addEventListener('submit', function (event) {
         'disabled': true
     });
     $('#submit-btn').attr('disabled', true);
-    stripe.confirmCardPayment(clientSecret, {
+    stripe.confirmCardPayment(client_secret, {
         payment_method: {
             card: card,
         }
     }).then(function (result) {
         if (result.error) {
-            let errorMessage = document.getElementById('#card-error-message');
+            let errorMessage = document.getElementById('card-error-message');
             let html = `${result.error.message}`;
             $(errorMessage).html(html);
             card.update({
