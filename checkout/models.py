@@ -30,7 +30,7 @@ class Order_details(models.Model):
     def order_total_update(self):
         """Update grand total each time new item is added including delivery"""
 
-        self.sub_total = self.items_ordered.aggregate(Sum('item_ordered_total'))['order_total__sum']
+        self.sub_total = self.items_ordered.aggregate(Sum('item_ordered_total'))['order_total__sum'] or 0
         self.delivery =  settings.STANDARD_DELIVERY
         self.order_total = self.sub_total + self.delivery
         self.save()
@@ -54,10 +54,10 @@ class Item_ordered(models.Model):
     quantity = models.IntegerField(null=False, blank=False, default=0)
     item_ordered_total = models.DecimalField(max_digits=6, decimal_places=2, null=False, blank=False, editable=False)
 
-    def save(self, *price, **data):
+    def save(self, *args, **kwargs):
         """Set the items ordered total and update the overall total."""
         self.item_ordered_total = self.product.price * self.quantity
-        super().save(*price, **data)
+        super().save(*args, **kwargs)
 
     def __str__(self):
         return f'Your order number : {self.order.order_number}'
