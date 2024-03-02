@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block page_header %}
+<div class="header-container">
+</div>
+{% endblock %}
+
+{% block newsletter %}
+<div class="form-container container-fluid">
+    <section class="form-section col-12 col-lg-5 text-center">
+        <h5>Subscribe here today!</h5>
+        <p class="text-muted small">*required field</p>
+        <form method="POST" action="{% url 'newsletter_subscription' %}">
+            {% csrf_token %}
+            {{ form | crispy }}
+            <div class="form-group pt-4">
+                <button type="submit" class="btn btn-lg bg-dark text-white px-5 active">Subscribe!</button>
+            </div>
+        </form>
+    </section>
+</div>
+{% endblock %}
