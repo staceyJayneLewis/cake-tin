@@ -49,25 +49,65 @@ form.addEventListener('submit', function (event) {
     $('#submit-btn').attr('disabled', true);
     $('#payment-details').fadeToggle(100);
     $('#loading').fadeToggle(100);
-    stripe.confirmCardPayment(client_secret, {
-        payment_method: {
-            card: card,
-        }
-    }).then(function (result) {
-        if (result.error) {
-            let errorMessage = document.getElementById('card-error-message');
-            let html = `${result.error.message}`;
-            $(errorMessage).html(html);
-            card.update({
-                'disabled': false
-            });
-            $('#submit-btn').attr('disabled', false);
-            $('#payment-details').fadeToggle(100);
-            $('#loading').fadeToggle(100);
-        } else {
-            if (result.paymentIntent.status === 'succeeded') {
-                form.submit();
+
+    var save_info = Boolean($('#save-details-checkbox').attr('checked'));
+    // From using {% csrf_token %} in the form
+    var csrfToken = $('input[name="csrfmiddlewaretoken"]').val();
+    var postData = {
+        'csrfmiddlewaretoken': csrfToken,
+        'client_secret': client_secret,
+        'save_info': save_info,
+    };
+
+    var url = '/checkout/cache_checkout_data/';
+    $.post(url, postData).done(function () {
+        stripe.confirmCardPayment(client_secret, {
+            payment_method: {
+                card: card,
+                billing_details: {
+                    name: $.trim(form.full_name.value),
+                    phone: $.trim(form.contact_number.value),
+                    email: $.trim(form.email.value),
+                    address:{
+                        line1: $.trim(form.address_line_1.value),
+                        line2: $.trim(form.address_line_2.value),
+                        city: $.trim(form.town_or_city.value),
+                        country: $.trim(form.country.value),
+                    }
+                }
+            },
+            shipping: {
+                name: $.trim(form.full_name.value),
+                phone: $.trim(form.contact_number.value),
+                address: {
+                    line1: $.trim(form.address_line_1.value),
+                    line2: $.trim(form.address_line_2.value),
+                    city: $.trim(form.town_or_city.value),
+                    country: $.trim(form.country.value),
+                    postal_code: $.trim(form.postcode.value),
+                }
+            },
+        }).then(function(result) {
+            if (result.error) {
+                var errorMessage = document.getElementById('card-error-message');
+                var html = `
+                    <span class="icon" role="alert">
+                    <i class="fas fa-times"></i>
+                    </span>
+                    <span>${result.error.message}</span>`;
+                $(errorMessage).html(html);
+                $('#payment-details').fadeToggle(100);
+                $('#loading').fadeToggle(100);
+                card.update({ 'disabled': false});
+                $('#submit-btn').attr('disabled', false);
+            } else {
+                if (result.paymentIntent.status === 'succeeded') {
+                    form.submit();
+                }
             }
-        }
-    });
+        });
+    }).fail(function () {
+        // just reload the page, the error will be in django messages
+        location.reload();
+    })
 });

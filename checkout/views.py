@@ -1,19 +1,37 @@
-from django.shortcuts import render, reverse, redirect, get_object_or_404
+from django.shortcuts import render, reverse, redirect, get_object_or_404, HttpResponse
 from django.contrib import messages
 from django.conf import settings
+from django.views.decorators.http import require_POST
 
 from products.models import Product
 from .models import Order_details, Item_ordered
 
 from .forms import form_order_request
 from basket.contexts import basket_order
-import stripe 
+import stripe
+import json
+
+@require_POST
+def cache_checkout_data(request):
+        try:
+            pid = request.POST.get('client_secret').split('_secret')[0]
+            stripe.api_key = settings.STRIPE_SECRET_KEY
+            stripe.PaymentIntent.modify(pid, metadata={
+                'basket_session': json.dumps(request.session.get('basket_session', {})),
+                'save_details': request.POST.get('save-details'),
+                'username': request.user,
+            })
+            return HttpResponse(status=200)
+        except Exception as e:
+            messages.error(request, 'Sorry, your payment cannot be \
+                processed right now. Please try again later.')
+            return HttpResponse(content=e, status=400)
 
 def checkout(request):
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
     if request.method == 'POST':
-        basket = request.session.get('basket', {})
+        basket = request.session.get('basket_session', {})
 
         form_details = {
         'full_name': request.POST['full_name'],
@@ -43,12 +61,12 @@ def checkout(request):
 
                 except Product.DoesNotExist:
                     messages.error(request, (
-                        "There was an issue with a product in your basket, please contact us")
+                        "There was an issue with an item in your basket, please contact us.")
                     )
                     order.delete()
                     return redirect(reverse('basket'))
 
-            request.session['save_info'] = 'save-info' in request.POST
+            request.session['save-details'] = 'save_details' in request.POST
             return redirect(reverse('checkout_success', args=[order.order_number]))
         else:
             messages.error(
