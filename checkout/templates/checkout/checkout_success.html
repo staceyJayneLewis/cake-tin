@@ -11,18 +11,55 @@
     <div class="row">
         <div class="col-12 col-md-6">
             <h4>Thank you! Order confirmed!</h4>
+            <h5>Order #{{ order.order_number }}</h5>
             <hr>
-            <h6>Order No: {{ order.order_number}}</h6>
             <p>A confirmation email will be sent to <strong>{{order.email}}</strong> shortly.<br>
-                If you still have not received a confirmation email in 24 hours please contact us. </p>
+                If you still have not received a confirmation email in 24 hours please contact us.<br>
+             </p>
         </div>
     </div>
+
     <div class="row">
         <div class="col-12 col-lg-7">
+            <div class="order-confirmation-wrapper p-2">
+                <div class="row">
+                    <div class="col">
+                        <h6 class="font-weight-bold">Your Information</h6>
+                        <p>
+                        Full Name: {{ order.full_name }}<br>
+                        Phone Number: {{ order.contact_number }}<br>
+                        Order Date: {{ order.date }}<br>
+                        </p>
 
+                    </div>
+                    <div class="col">
+                        <h6 class="font-weight-bold">Shipping information</h6>
+                        <small class="text-muted">Delivering To:</small>
+                        <p class="mb-0">{{ order.address_line_1 }}</p>
+                        {% if order.address_line_2 %}
+                            <p class="mb-0">{{ order.address_line_2 }}</p>
+                        {% endif %}
+                            <p class="mb-0">{{ order.town_or_city }}</p>
+                            <p class="mb-0">{{ order.country }}</p>
+                        {% if order.postcode %}
+                            <p class="mb-0">{{ order.postcode }}</p>
+                        {% endif %}
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12 col-md-4">
+                        <h6 class="font-weight-bold">Billing info:</h6>
+                        <p>Subtotal: {{ order.sub_total }}<br>
+                        Delivery: {{ order.delivery}}<br>
+                        Order Total: {{ order.order_total}}
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-</div>       
+</div>
 {% endblock %}
 
 {% block postloadjs %}
