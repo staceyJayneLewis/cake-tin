@@ -198,6 +198,7 @@ Contact
 - [Heroku](https://www.heroku.com) used for hosting the deployed back-end site.
 - [Stripe](https://stripe.com) used for online secure payments of ecommerce products/services.
 - [AWS S3](https://aws.amazon.com/s3) used for online static file storage.
+- [TinyPNG](https://tinypng.com) | entire site | image | tool for image compression |
 
 ## Database Design
 
@@ -604,12 +605,24 @@ There are currently no differences between the local version and the live deploy
 
 | Source | Location | Type | Notes |
 | --- | --- | --- | --- |
-| [Pexels](https://www.pexels.com) | entire site | image | favicon on all pages |
-| [Unsplash](https://unsplash.com) | product page | image | sample of fake products |
-| [TinyPNG](https://tinypng.com) | entire site | image | tool for image compression |
 | [Vecteezy](https://www.vecteezy.com/vector-art/5043127-a-phone-icon-in-a-round-circle-vector) | Contact Page | image | icon for contact page |
 | [Seekicon](https://seekicon.com/free-icon/location-outline_1) | Contact Page | image | icon for contact page |
 | [Icon Packs](https://www.iconpacks.net/free-icon/mail-142.html) | Contact Page | image | icon for contact page |
+| [Unsplash](https://unsplash.com/photos/white-and-red-cupcake-with-white-icing-on-top-MJPr6nOdppw) | Cake tin classics product page | image | Red velvet Cake tin classics product image |
+| [Unsplash](https://unsplash.com/photos/cupcake-with-pink-icing-on-top-zEwgRzJJIvk) | Special Offers page | image | Cherry Bakwell product image |
+| [Unsplash](https://unsplash.com/photos/a-table-topped-with-cupcakes-covered-in-frosting-FIxdY7jOBus) | Cake Tin classics Product Page | image | Waffle product image |
+| [Unsplash](https://unsplash.com/photos/cupcake-with-white-icing-on-top-Ao09kk2ovB0) | Cake Tin classics Product Page | image |Minstrel product image |
+| [Unsplash](https://unsplash.com/photos/white-and-brown-cupcakes-on-white-table-gKrxflp1wv0) | Cake Tin classics Product Page | image | Oreo product image |
+| [Pexels](https://www.pexels.com/photo/cupcake-topped-with-creamy-icing-1055271/)| Special Offers | image | Salted Caramel Product Image |
+| [Pexels](https://www.pexels.com/photo/photograph-of-chocolate-cupcake-with-red-strawberry-toppings-1055272/ )| Cake Tin Classics Product Page | image | Raspberry Caramel Product Image |
+| [Pexels]( https://www.pexels.com/photo/cupcake-with-whipped-cream-and-fruits-on-top-1055270/)| Special Offers | image | Fruit Salad Product Image |
+| [Pexels](https://www.pexels.com/photo/shallow-focus-photography-of-chocolate-cupcakes-1028714/)| Winter Collection product images | image | Chocolate brownie Product Image |
+| [Unsplash](https://unsplash.com/photos/cupcake-on-table-TAegVkFYIqo) | Winter collection product images | image | Carrot cupcake product image |
+| [Pexels](https://www.pexels.com/photo/close-up-view-of-cupcakes-9880594/)| Winter Collection product images | image | Chocolate Orange Product Image |
+| [FreePik](https://www.freepik.com/premium-ai-image/green-cupcake-color-mint-cup-cake-delicious-cupcakes-dark-background-abstract-generative-ai-illustration_62269843.htm )| Winter Collection product images | image | Mint Chocolate Cupcake |
+| [Unsplash](https://unsplash.com/photos/cupcake-with-white-icing-on-brown-wooden-table-zyMJwFBg8u8 ) | Winter collection product images | image | Black Forest product image |
+| [Unsplash](https://unsplash.com/images/food/cupcake) | Winter collection product images | image | Blueberry cupcake product image |
+| [Pexels](https://www.pexels.com/photo/cupcakes-with-icing-and-chocolate-eggs-6625263/)| Winter Collection product images | image | Walnut Product Image |
 
 
 ### Acknowledgements
