@@ -18,7 +18,7 @@ def cache_checkout_data(request):
             stripe.api_key = settings.STRIPE_SECRET_KEY
             stripe.PaymentIntent.modify(pid, metadata={
                 'basket_session': json.dumps(request.session.get('basket_session', {})),
-                'save_details': request.POST.get('save-details'),
+                'save_info': request.POST.get('save_info'),
                 'username': request.user,
             })
             return HttpResponse(status=200)
@@ -48,7 +48,12 @@ def checkout(request):
 
         # checking form is valid
         if order_form.is_valid():
-            order = order_form.save()
+            order = order_form.save(commit=False)
+            pid = request.POST.get('client_secret').split('_secret')[0]
+            order.stripe_pid = pid
+            order.original_basket = json.dumps(basket)
+            order.save()
+
             for item_id, item_data in basket.items():
                 try:
                     product = Product.objects.get(id=item_id)
@@ -66,7 +71,7 @@ def checkout(request):
                     order.delete()
                     return redirect(reverse('basket'))
 
-            request.session['save-details'] = 'save_details' in request.POST
+            request.session['save_info'] = 'save-details' in request.POST
             return redirect(reverse('checkout_success', args=[order.order_number]))
         else:
             messages.error(
@@ -86,6 +91,10 @@ def checkout(request):
         intent = stripe.PaymentIntent.create(amount=stripe_amount, currency=settings.STRIPE_CURRENCY)
 
         order_request = form_order_request()
+
+        if not stripe_public_key:
+            messages.warning(request, 'Stripe public key is missing. \
+                Did you forget to set it in your environment?')
 
         template = 'checkout/checkout.html'
         context = {

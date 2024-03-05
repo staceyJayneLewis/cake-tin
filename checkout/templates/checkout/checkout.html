@@ -39,6 +39,8 @@
             <p>Enter card payment details here:</p>
             <div id="payment-details"></div>
             <div id="card-error-message"></div>
+            <input type="hidden" vaue="{{ client_secret }}" name="client_secret">
+
             <p class="pt-3"><strong>Order total:</strong> £{{ order_total | floatformat:2 }} (incl. delivery)</p>
             <div class="submit-btn pt-3">
                 <a href="{% url 'basket' %}" class="btn pr-4">
