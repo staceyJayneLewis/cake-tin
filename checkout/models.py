@@ -2,6 +2,7 @@ from django.db import models
 from django.db.models import Sum
 from django.conf import settings
 from products.models import Product
+from decimal import Decimal
 import uuid
 
 class Order_details(models.Model):
@@ -21,6 +22,8 @@ class Order_details(models.Model):
     delivery = models.DecimalField(max_digits=6, decimal_places=2, null=False, default=0)
     order_total = models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0)
     date = models.DateTimeField(auto_now_add=True)
+    original_basket = models.TextField(null=False, blank=False, default='')
+    stripe_pid = models.CharField(max_length=254, null=False, blank=False, default='')
 
     def _order_id(self):
         """ Create unique id order number for items """
@@ -30,8 +33,8 @@ class Order_details(models.Model):
     def order_total_update(self):
         """Update grand total each time new item is added including delivery"""
 
-        self.sub_total = self.items_ordered.aggregate(Sum('item_ordered_total'))['order_total__sum'] or 0
-        self.delivery =  settings.STANDARD_DELIVERY
+        self.sub_total = self.items_ordered.aggregate(Sum('item_ordered_total'))['item_ordered_total__sum']
+        self.delivery =  Decimal(settings.STANDARD_DELIVERY)
         self.order_total = self.sub_total + self.delivery
         self.save()
 
