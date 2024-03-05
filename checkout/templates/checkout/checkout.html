@@ -18,14 +18,14 @@
             <form action="{% url 'checkout' %}" method="POST" id="checkout-form">
                 {% csrf_token %}
                 {{ order_request | crispy }}
-                <div id="save-details" class="save-details pt-1">
+                <div class="form-check form-check-inline pt-1">
                     {% if user.is_authenticated %}
                     <label class="form-check-label" for="save-details-checkbox">Save details for future
                         orders</label>
                     <input class="form-check-input ml-2 mr-0" type="checkbox" id="save-details-checkbox"
                         name="save-details" checked>
                     {% else %}
-                    <label class="form-check-label" for="id-save-details">
+                    <label class="form-check-label" for="save-details-checkbox">
                         <a href="{% url 'account_login' %}">Sign in</a> to save your information or
                         <a href="{% url 'account_signup' %}">Register</a> here
                     </label>
