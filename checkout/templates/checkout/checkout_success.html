@@ -59,5 +59,22 @@
             </div>
         </div>
     </div>
+
+    <!-- checkout success buttons -->
+    <div class="col-12 col-lg-7 text-right">
+        {% if from_profile %}
+            <a href="{% url 'profile' %}" class="btn">
+                <span class="icon mr-2">
+                    <i class="fas fa-a-left"></i>
+                </span>
+                <span class="text-uppercase">Back to Profile</span>
+            </a>
+        {% else %}
+            <a href="{% url 'all_products' %}?category=special_offers" class="btn">
+                <span class="text-uppercase">Have you seen our special offers?</span>
+            </a>
+        {% endif %}
+    </div>
+</div>
 </div>
 {% endblock %}
