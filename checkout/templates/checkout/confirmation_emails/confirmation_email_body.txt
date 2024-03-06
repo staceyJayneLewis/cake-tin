@@ -1,0 +1,14 @@
+Thank you for your purchase {{ order.full_name }}!
+
+Your order is being processed and should arrive at your destination within 3-5 days by standard delivery. 
+(You will receive a notification once your order has been shipped.)
+
+We would love to hear from you once you receive your items.
+If you have any questions or need further assistance, please do not hesitate to contact our customer service team 
+at hello@caketin.com or 01756 801568. 
+
+Thanks again for choosing Cake Tin. We value your business and look forward to serving you again.
+
+Kind Regards,
+
+The Cake Tin Sales Team
