@@ -1,5 +1,4 @@
 var stripePublicKey  = $('#id_stripe_public_key').text().slice(1, -1);
-console.log(stripePublicKey )
 var client_secret = $('#id_client_secret').text().slice(1, -1);
 var stripe = Stripe(stripePublicKey );
 var elements = stripe.elements();
