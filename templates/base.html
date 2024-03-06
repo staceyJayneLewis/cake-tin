@@ -71,8 +71,8 @@
                 <li class="nav-item dropdown my-auto pr-2">
                     <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">My Account</a>
                   <div class="dropdown-menu">
+                    <a class="dropdown-item" href="{% url 'profile' %}">My Profile</a>
                     <a class="dropdown-item" href="#">Order History</a>
-                    <a class="dropdown-item" href="#">Details</a>
                     {% if request.user.is_superuser %}
                       <a class="dropdown-item" href="#">Manage Store</a>
                     {% endif %}
