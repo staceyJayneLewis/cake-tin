@@ -36,18 +36,17 @@ def checkout(request):
         basket = request.session.get('basket_session', {})
 
         form_details = {
-        'full_name': request.POST['full_name'],
-        'email': request.POST['email'],
-        'contact_number': request.POST['contact_number'],
-        'country': request.POST['country'],
-        'postcode': request.POST['postcode'],
-        'town_or_city': request.POST['town_or_city'],
-        'address_line_1': request.POST['address_line_1'],
-        'address_line_2': request.POST['address_line_2'],
+            'full_name': request.POST['full_name'],
+            'email': request.POST['email'],
+            'contact_number': request.POST['contact_number'],
+            'country': request.POST['country'],
+            'postcode': request.POST['postcode'],
+            'town_or_city': request.POST['town_or_city'],
+            'address_line_1': request.POST['address_line_1'],
+            'address_line_2': request.POST['address_line_2'],
         }
 
         order_form = form_order_request(form_details)
-
         # checking form is valid
         if order_form.is_valid():
             order = order_form.save(commit=False)
@@ -92,20 +91,36 @@ def checkout(request):
         stripe.api_key = stripe_secret_key
         intent = stripe.PaymentIntent.create(amount=stripe_amount, currency=settings.STRIPE_CURRENCY)
 
-        order_request = form_order_request()
+        if request.user.is_authenticated:
+            try:
+                profile = UserProfile.objects.get(user=request.user)
+                order_form = form_order_request(initial={
+                    'full_name': profile.user.get_full_name(),
+                    'email': profile.user.email,
+                    'contact_number': profile.default_contact_number,
+                    'country': profile.default_country,
+                    'postcode': profile.default_postcode,
+                    'town_or_city': profile.default_town_or_city,
+                    'address_line_1': profile.default_address_line_1,
+                    'address_line_2': profile.default_address_line_2,
+                })
+            except UserProfile.DoesNotExist:
+                order_form = form_order_request()
+        else:
+            order_form = form_order_request()
 
-        if not stripe_public_key:
-            messages.warning(request, 'Stripe public key is missing. \
-                Did you forget to set it in your environment?')
+    if not stripe_public_key:
+        messages.warning(request, 'Stripe public key is missing. \
+            Did you forget to set it in your environment?')
 
-        template = 'checkout/checkout.html'
-        context = {
-            'order_request': order_request,
-            'stripe_public_key': stripe_public_key,
-            'client_secret': intent.client_secret,
-        }
+    template = 'checkout/checkout.html'
+    context = {
+        'order_form': order_form,
+        'stripe_public_key': stripe_public_key,
+        'client_secret': intent.client_secret,
+    }
 
-        return render(request, template, context)
+    return render(request, template, context)
 
 def checkout_success(request, order_number):
     """
