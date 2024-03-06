@@ -10,7 +10,7 @@ class Item_ordered_admin_inline(admin.TabularInline):
 class Order_admin(admin.ModelAdmin):
     inlines = (Item_ordered_admin_inline,)
     readonly_fields = (
-        'order_number', 'sub_total', 'order_total', 'delivery',
+        'order_number', 'user_profile','sub_total', 'order_total', 'delivery',
         'date', 'original_basket', 'stripe_pid'
     )
 
