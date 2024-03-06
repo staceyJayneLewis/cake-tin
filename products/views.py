@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect,reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
 from .models import Product, Category
+from .forms import ProductFormAdmin
 
 # Create your views here.
 
@@ -46,3 +47,24 @@ def product_description(request, product_id):
     }
 
     return render(request, 'products/product_description.html', context)
+
+
+def add_product(request):
+    """Add product to store through the admin"""
+    if request.method == 'POST':
+        form = ProductFormAdmin(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully added product!')
+            return redirect(reverse('add_product'))
+        else:
+            messages.error(request, 'Unable to add product. Please ensure the form is valid.')
+    else:
+        form = ProductFormAdmin()
+
+    template = 'products/add_product.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
