@@ -17,7 +17,7 @@
             <!-- Payment details form -->
             <form action="{% url 'checkout' %}" method="POST" id="checkout-form">
                 {% csrf_token %}
-                {{ order_request | crispy }}
+                {{ order_form | crispy }}
                 <div class="form-check form-check-inline pt-1">
                     {% if user.is_authenticated %}
                     <label class="form-check-label" for="save-details-checkbox">Save details for future
