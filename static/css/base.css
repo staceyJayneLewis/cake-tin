@@ -1,15 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
 
-html{
+html, body{
     height: 100%;
 }
 
 body{
-    /* the following code was copied from DEV as refrenced in sources */
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
     color:black;
+}
+
+body > footer{
+    position:sticky;
+    top: 100vh;
 }
 
 .navbar-brand{
