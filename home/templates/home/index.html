@@ -45,7 +45,8 @@
 
     <div class="newsletter-container bg-dark">
         <div class="row text-center">
-            <h2 class="text-white"><a href="{% url 'newsletter_subscription' %}">SUBSCRIBE NOW!</a></h2>
+            <div class="col">
+                <h2><a href="{% url 'newsletter_subscription' %}" class="text-white">SUBSCRIBE NOW!</a></h2>
         </div>
     </div>
 {% endblock %}

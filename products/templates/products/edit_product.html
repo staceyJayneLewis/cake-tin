@@ -32,12 +32,14 @@
                             {{ field }}
                         {% endif %}
                     {% endfor %}
-                    <div class="text-right">
-                        <a class="btn btn-outline-black" href="{% url 'all_products' %}">Cancel</a>
-                        <button class="btn" type="submit">Update product</button>
-                    </div>
                 </form>
-            </div>            
+            </div>
+            <div class="row mb-3">
+                <div class="col-12 edit-buttons">
+                    <a class="btn btn-outline-black" href="{% url 'all_products' %}">Cancel</a>
+                    <button class="btn btn-dark text-white" type="submit">Update product</button>
+                </div>
+            </div>          
         </div>
     </div>
 {% endblock %}
