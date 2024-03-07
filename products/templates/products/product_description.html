@@ -16,7 +16,7 @@
                 {% endif %}
                 {% if product.image %}
                 <a href="{{ product.image.url }}" target="_blank">
-                    <img src="{{ product.image.url }}" class="img-fluid" alt="{{ product.name }}" target="_blank">
+                    <img src="{{ product.image.url }}" class="img-fluid" alt="{{ product.name }}">
                 </a>
                 {% else %}
                 <a href="{{ product.image.url }}" target="_blank">
@@ -69,8 +69,8 @@
                             <div class="row">
                                 <div class="col">
                                     <p class="mb-0 price text-danger">
-                                        <strike><small>£{{ product.price }}</small></strike><span
-                                            class="pl-2 text-dark">£{{ product.sale_price }}</span>
+                                        <small style="text-decoration: line-through;">£{{ product.price }}</small>
+                                        <span class="pl-2 text-dark">£{{ product.sale_price }}</span>
                                     </p>
                                 </div>
                             </div>
