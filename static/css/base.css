@@ -71,6 +71,11 @@ input[name='q']::placeholder {
     object-fit: cover;
 }
 
+.carousel-caption {
+    left: 0 !important;
+    right: 0 !important;
+}
+
 /* products page */
 .price {
     font-size: 1.3rem;
