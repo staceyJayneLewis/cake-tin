@@ -1,1 +1,1 @@
-Boutique Ado Confirmation for Order Number {{ order.order_number }}
+The Cake Tin Confirmation for Order Number {{ order.order_number }}
