@@ -26,11 +26,15 @@ class Product(models.Model):
     allergen = models.TextField(null=True)
     # sale item
     is_on_sale = models.BooleanField(default=False)
-    sale_price = models.DecimalField(default=0, decimal_places=2, max_digits=6 )
+    sale_price = models.DecimalField(default=0, decimal_places=2, max_digits=6)
 
     def image_preview(self):
         from django.utils.html import format_html
-        return format_html(f"<img src='{self.image.url}' height='150'>")
+        if self.image:
+            return format_html(f"<img src='{self.image.url}' height='150'>")
+        else:
+            return format_html(
+                f"<img src='../../../media/no_image.png' height='150'>")
 
     def __str__(self):
         return self.name
