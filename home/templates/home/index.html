@@ -20,23 +20,24 @@
                 <!-- Callout carousel -->
                 <div id="carousel-slide" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
-                           <div class="carousel-item active">
-                            <img src="{{ MEDIA_URL }}mint-chocolate.jpg" class="d-block w-100" alt="mint chocolate cupcake image">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5>Mint Chocolate</h5>
+                        {% for product in products %}
+                        <div class="carousel-item {% if forloop.first %}active{% endif %}">
+                            {% if product.image %}
+                                <img src="{{ product.image.url }}" class="d-block w-100" alt="{{ product.name }}">
+                            {% else %}
+                                <img src="{{ MEDIA_URL }}no_image.png" class="d-block w-100" alt="{{ product.name }}">
+                            {% endif %}
+                            <div class="carousel-caption d-none d-md-block bg-dark text-white">
+                                <h5>{{ product.name }}</h5>
                             </div>
                         </div>
-                        <div class="carousel-item">
-                            <img src="{{ MEDIA_URL }}black-forest-gateaux-2.jpg" class="d-block w-100" alt="black forest cupcake image">
-                            <div class="carousel-caption text-dark d-none d-md-block">
-                                <h5>Black Forest Gateaux</h5>
-                            </div>
-                        </div>
+                        {% endfor %}
                     </div>
                     <!-- Carousel indicators -->
                     <ol class="carousel-indicators">
-                        <li data-target="#carousel-slide" data-slide-to="0" class="active"></li>
-                        <li data-target="#carousel-slide" data-slide-to="1"></li>
+                        {% for product in products %}
+                            <li data-target="#carousel-slide" data-slide-to="{{ forloop.counter0 }}" class="{% if forloop.first %}active{% endif %}"></li>
+                        {% endfor %}
                     </ol>
                 </div>
             </div>
