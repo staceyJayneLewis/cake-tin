@@ -51,7 +51,6 @@ I used [coolors.co](https://coolors.co/d3d3d3-343a40-000000-ffffff) to generate 
 ### New Site Users
 
 - As a new site user, I would like to register for an account, so that I can have my own account.
-- As a new site user, I would like to receive an email confirmation after signing up, so that I can be certain I am signed up.
 - As a new site user, I would like to create a secure password, so that I can be assured my account is secure.
 - As a new site user, I would like to view the selection of cakes, so that I can see what the product looks like.
 - As a new site user, I would like to see a product description page, so that I can see the price, product description, image and nutrition & allergy details.
@@ -69,15 +68,14 @@ I used [coolors.co](https://coolors.co/d3d3d3-343a40-000000-ffffff) to generate 
 - As a returning site user, I would like to recover my password if I have forgotten it, so that I can gain access back to my account.
 - As a returning site user, have visual sight of my shopping basket , so that I can keep track of the total amount I am spending to make sure it is affordable for me.
 - As a returning site user, I would like to see a list of categories of cake types, so that I can easily navigate to the product I want such a new collection or offers and sales.
-- As a returning site user, I would like to view recent searches, so that I don't have to go searching for a product I purchased previously or have to retype the product each time.
-- As a returning site user, I would like to know my payment details are stored securely so that I can be reassured when I add my details. 
+- As a returning site user, I would like to view recent purchases, so that I don't have to go searching for a product I purchased previously or have to retype the product each time.
 
 ### Site Admin
 
 - As a site administrator, I should be able to add new products, so that I can add new items to my store.
 - As a site administrator, I should be able to edit products, so that I can edit any items that need amending such a price etc.
 - As a site administrator, I should be able to delete products, so that I can remove any products no longer on sale.
-- As a site administrator, I should be able to section products into categories, so that I can organise the products to make it m
+- As a site administrator, I should be able to section products into categories, so that I can organise the products easily.
 - As a site administrator, I should be able to easily manage my account, so that I can keep the website up to date.
 
 ## Wireframes
@@ -89,19 +87,43 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 <summary> Click here to see the Wireframes </summary>
 
 Home
-  - ![screenshot](documentation/wireframes/wireframe-caketin.jpg)
+  - ![screenshot](documentation/wireframes/home.jpg)
 
-Our Products
-  - ![screenshot](documentation/wireframes/wireframe-caketin-products.jpg)
-
-Winter Collection
-  - ![screenshot](documentation/wireframes/wireframe-caketin-winter-collection.jpg)
-
-Special Offers
-  - ![screenshot](documentation/wireframes/wireframe-caketin-winter-special-offers.jpg)
+Our Products (All Cupcakes, cake tin classics, winter collection, valentines collection & special offers )
+  - ![screenshot](documentation/wireframes/our_products.jpg)
 
 Contact
-  - ![screenshot](documentation/wireframes/wireframe-caketin-winter-contact.jpg)
+  - ![screenshot](documentation/wireframes/contact.jpg)
+
+Basket
+  - ![screenshot](documentation/wireframes/basket.jpg)
+
+Checkout & Payment details
+  - ![screenshot](documentation/wireframes/payment.jpg)
+
+Product Description
+  - ![screenshot](documentation/wireframes/product-description.jpg)
+
+Product Management
+  - ![screenshot](documentation/wireframes/product-management.jpg)
+
+Sign in
+  - ![screenshot](documentation/wireframes/sign_in.jpg)
+
+Register
+  - ![screenshot](documentation/wireframes/register.jpg)
+
+Log out
+  - ![screenshot](documentation/wireframes/log_out.jpg)
+
+Profile
+  - ![screenshot](documentation/wireframes/profile.jpg)
+
+Confirmation page
+  - ![screenshot](documentation/wireframes/confirmation.jpg)
+
+Newsletter
+  - ![screenshot](documentation/wireframes/newsletter.jpg)
 
 </details >
 
@@ -182,6 +204,8 @@ Contact
     - link google reviews or trust pilot review to website.
 - Link social media to the website #4
 	- Allow users to see recent social media posts on the website
+- verfication email set up
+	- set a functionality up where users have to verify their email when signing up.
 
 ## Tools & Technologies Used
 
@@ -198,7 +222,8 @@ Contact
 - [Heroku](https://www.heroku.com) used for hosting the deployed back-end site.
 - [Stripe](https://stripe.com) used for online secure payments of ecommerce products/services.
 - [AWS S3](https://aws.amazon.com/s3) used for online static file storage.
-- [TinyPNG](https://tinypng.com) | entire site | image | tool for image compression |
+- [TinyPNG](https://tinypng.com) used tool for image compression.
+- [graphviz](https://graphviz.org/) used to generate the ERD database design graph for my models.
 
 ## Database Design
 
@@ -618,12 +643,21 @@ There are currently no differences between the local version and the live deploy
 | [Django Documentation](https://docs.djangoproject.com/en/5.0/topics/db/aggregation/) | Help to understand how aggregation works to use on the checkout model |
 | [Stripe Docs](https://docs.stripe.com/) | Help to understand how to set up the start of the stripe payments process |
 | [NKMK](https://note.nkmk.me/en/python-tuple-single-empty/) | Helped me find the answer of using a single element in a tuple |
-| [DEV](https://dev.to/nehalahmadkhan/how-to-make-footer-stick-to-bottom-of-web-page-3i14) | Helped to fix the footer to the bottom of the page when the page height is less than the full viewport |
 | [stackoverflow](https://stackoverflow.com/questions/16307307/django-admin-show-image-from-imagefield/16307554#16307554) | Showed me how to display the product image on the admin |
 | [stackoverflow](https://stackoverflow.com/questions/46021463/heroku-giving-500-error-with-little-information-internal-server-error) | helped to figure out how to use heroku logs -t to check the internal server error |
 | [stackoverflow](https://stackoverflow.com/questions/65581489/uncaught-in-promise-integrationerror-invalid-value-for-stripe-confirmcardpaym) | helped understand what the stripe intent error could be |
 | [stackoverflow](https://stackoverflow.com/questions/16105485/unsupported-operand-types-for-float-and-decimal) | helped me figure out how to solve the opperand error I was receiving |
 | [stackoverflow](https://stackoverflow.com/questions/32123477/how-to-revert-the-last-migration) | how to revert to the last migration due to error |
+| [reddit](https://www.reddit.com/r/djangolearning/comments/rwnpyv/tutorial_help_getting_reverse_for_profile_with/) | Helped me to figure out the reverse for 'add_to_basket' with no arguments not found error |
+| [stackoverflow](https://stackoverflow.com/questions/65239302/python-django-non-nullable-field) | Help to figure out the error: You are trying to add a non-nullable field 'allergen' to product without a default; we can't do that' |
+| [geeksforgeeks](https://www.geeksforgeeks.org/textfield-django-models/) | how to add default fields to the django models |
+| [mozilla](https://developer.mozilla.org/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data) | Help me understand the sending and retreiving data from forms using django |
+| [stackoverflow](https://stackoverflow.com/questions/14149088/how-to-pass-value-from-optionselect-to-form-action) | how to pass values from select options to form action |
+| [stackoverflow](https://stackoverflow.com/questions/38836795/typeerror-int-argument-must-be-a-string-a-bytes-like-object-or-a-number-not) | assisted me in finding out the type error fix |
+| [nkmk](https://note.nkmk.me/en/python-tuple-single-empty/) | Error: The value of 'inlines' must be a list or tuple error - helped me realise that as it is a tuple I need to include a comma even though there only 1 element in it. |
+| [stackoverflow](https://stackoverflow.com/questions/46021463/heroku-giving-500-error-with-little-information-internal-server-error) | Helped me understand how to find the error message when error 500 is displayed |
+| [https://stackoverflow.com/questions/65581489/uncaught-in-promise-integrationerror-invalid-value-for-stripe-confirmcardpaym](stackoverflow) | Helped me understand my mistake of putting quotation marks on the value of the intent key and the public key which was causing me an error |
+
 
 ### Media
 
@@ -647,6 +681,7 @@ There are currently no differences between the local version and the live deploy
 | [Unsplash](https://unsplash.com/photos/cupcake-with-white-icing-on-brown-wooden-table-zyMJwFBg8u8 ) | Winter collection product images | image | Black Forest product image |
 | [Unsplash](https://unsplash.com/images/food/cupcake) | Winter collection product images | image | Blueberry cupcake product image |
 | [Pexels](https://www.pexels.com/photo/cupcakes-with-icing-and-chocolate-eggs-6625263/)| Winter Collection product images | image | Walnut Product Image |
+| [medium.com](https://medium.com/@yathomasi1/) | Read Me | graph image | ERD diagram for models |
 
 
 ### Acknowledgements
