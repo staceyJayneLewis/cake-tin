@@ -205,6 +205,8 @@ Contact
 Entity Relationship Diagrams (ERD) help to visualize database architecture before creating models.
 Understanding the relationships between different tables can save time later in the project.
 
+`Products App`
+
 ```python
 class Category(models.Model):
 
@@ -222,41 +224,61 @@ class Category(models.Model):
 
     
 class Product(models.Model):
-    category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
+    category = models.ManyToManyField('Category')
     name = models.CharField(max_length=254)
     description = models.TextField()
     price = models.DecimalField(max_digits=6, decimal_places=2)
     image = models.ImageField(null=True, blank=True)
     nutritional = models.TextField(null=True)
     allergen = models.TextField(null=True)
+    # sale item
+    is_on_sale = models.BooleanField(default=False)
+    sale_price = models.DecimalField(default=0, decimal_places=2, max_digits=6)
+
+    def image_preview(self):
+        from django.utils.html import format_html
+        if self.image:
+            return format_html(f"<img src='{self.image.url}' height='150'>")
+        else:
+            return format_html(
+                f"<img src='../../../media/no_image.png' height='150'>")
 
     def __str__(self):
         return self.name
 ```
 
-![screenshot](documentation/erd.png)
+### Custom Models
 
+I have created 2 custom models:
 
-- Table: **Category**
+`Contact App`
 
-    | **PK** | **id** (unique) | Type | Notes |
-    | --- | --- | --- | --- |
-    | | name | CharField | |
-    | | display_name | CharField | |
+```python
+class Contact(models.Model):
+    name = models.CharField(max_length=254, null=False, blank=False)
+    email = models.EmailField(max_length=254, null=False, blank=False)
+    contact_number = models.CharField(max_length=25, null=True, blank=True)
+    message = models.TextField(null=False, blank=False)
 
+    def __str__(self):
+        return self.name
+```
 
+`Newsletter App`
 
-- Table: **Product**
+```python
+class NewsletterUser(models.Model):
+    email = models.EmailField()
+    date_added = models.DateTimeField(auto_now_add=True)
 
-    | **PK** | **id** (unique) | Type | Notes |
-    | --- | --- | --- | --- |
-    | **FK** | category | ForeignKey | FK to **Category** model |
-    | | name | CharField | |
-    | | description | TextField | |
-    | | price | DecimalField | |
-    | | image | ImageField | |
-	| | nutritional | TextField | |
-	| | allergen | TextField | |
+    def __str__(self):
+        return self.email
+```
+
+I have used `graphviz` and `django-extensions` to auto-generate an ERD.
+
+![erd](documentation/erd.png)
+source: [medium.com](https://medium.com/@yathomasi1/1-using-django-extensions-to-visualize-the-database-diagram-in-django-application-c5fa7e710e16)
 
 
 ## Testing
