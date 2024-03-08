@@ -3,7 +3,7 @@ from products.models import Product
 
 def index(request):
     """Return to the index page """
-    products = Product.objects.order_by('?')[:2]
+    products = Product.objects.order_by('?')[:4]
     template = 'home/index.html'
     context = {
         'products': products,
