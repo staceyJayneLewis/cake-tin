@@ -5,7 +5,7 @@ class Category(models.Model):
 
     class Meta:
         verbose_name_plural = 'Categories'
-        
+
     name = models.CharField(max_length=254)
     display_name = models.CharField(max_length=254, null=True, blank=True)
 
@@ -15,7 +15,7 @@ class Category(models.Model):
     def show_display_name(self):
         return self.display_name
 
-    
+
 class Product(models.Model):
     category = models.ManyToManyField('Category')
     name = models.CharField(max_length=254)

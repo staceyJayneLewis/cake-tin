@@ -17,7 +17,9 @@ def profile(request):
             form.save()
             messages.success(request, 'Profile updated successfully')
         else:
-            messages.error(request, "Unable to update profile details, please check all required fields are filled correctly.")
+            messages.error(
+                request,
+                "Unable to update profile details, please check all fields.")
     else:
         form = UserProfileForm(instance=profile)
     orders = profile.orders.all()
@@ -30,6 +32,7 @@ def profile(request):
     }
 
     return render(request, template, context)
+
 
 def order_history(request, order_number):
     order = get_object_or_404(Order_details, order_number=order_number)
