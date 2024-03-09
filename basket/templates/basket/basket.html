@@ -26,15 +26,12 @@
                         {% for items in basket_items %}
                         <tr>
                             <td class="w-25">
-                                {% if item.product.image %}
-                                <img class="w-100" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
+                                {% if items.product.image %}
+                                <img class="w-100" src="{{ items.product.image.url }}" alt="{{ items.product.name }}">
                                 {% else %}
-                                <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.name }}">
+                                <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ items.product.name }}">
                                 {% endif %}
-                                <img src="{{ items.product.image.url }}" class="img-fluid">
-                            </td>
-                            <td class="py-3">
-                                <p><strong>{{ item.product.name }}</strong></p>
+                                {{ items.product.name }}
                             </td>
                             <td class="w-25">
                                 <form class="form form-update" method="POST"
@@ -98,7 +95,7 @@
     $('.update-btn').click(function (e) {
         var form = $(this).prev('.form-update');
         form.submit();
-    })
+    });
 
     // Remove item and reload on click
     $('.remove-btn').click(function (e) {
@@ -113,6 +110,6 @@
             .done(function () {
                 location.reload();
             });
-    })
+    });
 </script>
 {% endblock %}
