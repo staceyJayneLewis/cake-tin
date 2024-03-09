@@ -9,12 +9,11 @@
 {% block content %}
     <div class="container-fluid">
         <div class="row">
-            <div class="col-12">
+            <div class="col-12 bg-danger m-5">
                 Error 404: Page Not Found.
                 <br>
-                <a href="{% url 'home' %}" class="btn btn-dark">Return Home</a>
+                <a href="{% url 'home' %}" class="btn btn-dark pt-3">Return Home</a>
             </div>
         </div>
     </div>
-
 {% endblock %}
