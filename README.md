@@ -136,47 +136,47 @@ Newsletter
     - The navbar is the way to navigate around the site and is also responsive for smaller devices too. The navbar includes many of the important features for the e-commerce site, such as branding, links for each page, search input, basket total, login/logout button, and register button. The navbar is also a sticky navbar, meaning it will always be available at the top of the page to be user-friendly, as users do not have to be inconvenienced by scrolling back up to the top of the page to change pages. The search input allows users to search for products of a specific type, such as 'Mint', and it will display any cupcakes with the word mint in their product description or name, making the search easier for customers who know what flavour or type of cake they would specifically like.
     I designed the navbar to keep the background white so it blends in nicely with the page and adds to the classy look and flow of the site.
 
-![screenshot](documentation/feature1.jpg)
+    ![screenshot](documentation/feature1.jpg)
 
 - **Logo #2**
 
     - The logo is a vital part of the site, as it is how customers recognise the brand and the business, giving the target audience an idea of what the company is. The target audience will recognise the brand and business by its logo and may even make a judgement based on how the logo looks.
     For the logo style, I have simply used the Parisienne font, which has a handwritten cursive style that helps portray the classy and elegant look we want the branding to display.
 
-![screenshot](documentation/feature2.jpg)
+    ![screenshot](documentation/feature2.jpg)
 
 - **Carousel #3**
 
     - I have used Bootstrap to help create a carousel for the product images on the home page, as it's a great way of displaying all products, and it will display a random image each time a user visits. The carousel scrolls automatically, or they can use the indicators to scroll through at their own pace, one at a time rather than all at once. referring to Hick's law, it reduces the complex structure of information. The value the carousel brings to the site is that it enables more than one image to occupy the same piece of the website without looking overcrowded.
     The style of my website is to use the images to add colour to the website and keep everything else black and white so the user focuses on the images, so having the carousel adds a nice simplistic effect to the site to display different items.
 
-![screenshot](documentation/feature3.jpg)
+    ![screenshot](documentation/feature3.jpg)
 
 - **Callout heading and button #4**
 
     - The callout heading and button are a simple way to advertise the latest collection or anything the site owner would like the customers to notice as they first enter the site. It is followed by a'shop now' button underneath so the user can easily be directed to the page of the products they are referring to in the callout heading, helping push sales and interest.
 
-![screenshot](documentation/feature4.jpg)
+    ![screenshot](documentation/feature4.jpg)
 
 - **Category dropdown #5**
 
     - I have used a drop-down menu to display all the different categories available in one place under the 'our products' navbar button. Dropdowns are useful because they allow users to quickly and easily select an option without having to type anything or navigate to another page. They also allow them to see all the options in one place.
     It also saves space on a webpage by only displaying options when needed, so it does not look complex for users who are not so tech-savvy. 
 
-![screenshot](documentation/feature5.jpg)
+    ![screenshot](documentation/feature5.jpg)
 
 - **Footer #6**
 
     - The footer is simply based at the bottom of the page with a grey background that have the options of different social media links used from font awesome which are highlighted in red when hovered over and also the copyright information also displayed in black. The footers' benefits are that it gives the option to view Cake Tin's online presence easily, as they can see real-time feedback from other customers. It is convenient as the links go directly to the social media websites, so the users do not have to go looking for the social media websites independently, it is all in one place. With this in mind, it can increase followers on their social media too allowing more interest and potential buyers for the business owner.
 
-![screenshot](documentation/feature6.jpg)
+    ![screenshot](documentation/feature6.jpg)
 
 - **Product cards #7**
 
     - I have used bootstrap cards to display each cupcake on the products pages so they are neatly displayed very clearly and obvious to the users. Again, I have kept the background of these cards white and added a box shadow instead of a border line so the users can clearly see they are cards and I can keep the styling minimal. The reason I did not want to add a line border is because I am trying to keep the attention on the images and use little colour as the images will add the colours to the site which highlights they are the focus of the site.
     The cards also include important information such as the name and price of the products which are displayed using black font so users can see the prices clearly.
 
-![screenshot](documentation/feature7.jpg)
+    ![screenshot](documentation/feature7.jpg)
 
 
 - **Product description, price and quantity selection #8**
@@ -186,14 +186,14 @@ Newsletter
     Giving customers all the information they need to make a purchase is the end goal such as product name & description, price, quantity, promotional information, nutritional and allergen information and a checkout button.
     The quantity selection is also there to conveniently give the users the option to put in a different quantity if they want more than one rather than having to each one individually making it more user friendly.
 
-![screenshot](documentation/feature8.jpg)
+    ![screenshot](documentation/feature8.jpg)
 
 
 - **Add to bag & Continue shopping buttons #9**
 
     - As mentioned above in the product description features the page also includes a checkout button allowing customers to easily navigate to the basket page to check over their orders. The button is clearly higlighted in green to make it eye-catching to the users to simplify the use of the website and indicate what needs to be pressed to checkout the products if they are ready to do so. To the left of the checkout button includes a 'continue shopping' button for the ease of the customer if they want to go back and look at other products. Again, to make it clear to the customers I have used an icon from font awesome which helps customers understand it is a button to go back which is one of the common conventions used when using a website and so is a symbol many people understand. 
 
-![screenshot](documentation/feature9.jpg)
+    ![screenshot](documentation/feature9.jpg)
 
 
 - **Nutrition and Allergen information #10**
@@ -201,13 +201,13 @@ Newsletter
     - Again, as mentioned in the product description feature the product page also includes a nutritional and allergen feature which displays all the ingredients, calories and important allergen information which a customer may look for before deciding to purchase a product. I have displayed this information in a bootstrap accordion so that the users can display the information when needed, and the accordion has been placed directly below the product image so the information cannot be missed and is easy to locate.
     I have also used a background colour of grey so that it stands out below the colourful image. 
 
-![screenshot](documentation/feature10.jpg)
+    ![screenshot](documentation/feature10.jpg)
 
 - **Newsletter button #11**
 
     - I have added a simple subscribe now button on the bottom of the home page carousel to direct the users to the newsletter form. I have made the background of the button the same colour used on the other buttons on the website to make it clear that it is a button followed by white uppercase text to intice to the users to look there too. It also displays an underline when hovered so the user clearly knows it is a button. 
 
-![screenshot](documentation/feature11.jpg)
+    ![screenshot](documentation/feature11.jpg)
 
 - **Newsletter Form #12**
 
@@ -215,14 +215,14 @@ Newsletter
     Using the same colours as the newsletter button on the homepage the subsrcibe form button has a dark grey background and white text so the user knows exactly what to click to submit the form.
     The form also includes the '*required* underneath the subscribe now heading so the user understands they have to include an email before clicking subscribe which keeps the users information to make sure they do not get frustrated.
 
-![screenshot](documentation/feature12.jpg)
+    ![screenshot](documentation/feature12.jpg)
 
 - **Add to basket toaster #13**
 
     - When the add to basket button is clicked on the product description page the users will be helpfully notified that it was successfully added by the toaster pop up which also includes the quantity and name of the product they added aswell as the preview image and order total so they are always aware of their basket total. 
     It will also include a highlighted green button to help customer to go to checkout if they want to checkout immediatley or an 'x' on the top right corner to disable to notifcation. 
 
-![screenshot](documentation/feature13.jpg)
+    ![screenshot](documentation/feature13.jpg)
 
 - **Basket #14**
 
@@ -231,96 +231,96 @@ Newsletter
     There is an input box on the basket page so if there is something the user may have missed or forgotten about on the product page the can remove or add using the quantity input box. There is then a simple 'Update' button labelled in blue to click to update the quantity and a red 'remove' button to easily completely remove the item. To make the basket user-friendly I have also added the option of reducing the order to zero in order to delete the item from their basket.
     To make the page obvious it is the basket page I have clearly labelled the page with 'Your basket' header so the user knows exactly what part of the purchase process they are on and again included a highlighted green button as used on every other checkout button through the site so the customers knows the green buttons relate to the basket/checkout. 
 
-![screenshot](documentation/feature14.jpg)
+    ![screenshot](documentation/feature14.jpg)
 
 - **Order Summary #15**
 
     - Also on the basket page is an order Summary which has its own column. The reason I chose this layout is naturally the user reads things from left to right so I wanted to place order summary to the right so the customer can easily see the breakdown of the order total. The order total displays the sub-total, delivery and the order amount in total. The order summary is a header so the user knows that section is the summary and the order total is also in bold to highlight the final amount before purchase. Again, the black font has been used for the order summary feature and making the important words bold. 
 
-![screenshot](documentation/feature15.jpg)
+    ![screenshot](documentation/feature15.jpg)
 
 - **Checkout Form #16**
 
     - The checkout form has a header clearly labelling the checkout and delivery information form with a subheader explaining what information needs to be filled in the form so the customer does not have to be confused on what information to put in. The form includes 7 inputs for the address information and a dropdown for the countries to make sure all users conform to the correct country format.
     The last feature of the form is a checkbox allowing the user decide if they want to save their information for future purchases if they are signed in so that next time they make a purchase the information will be already pre-filled into the text inputs making it much more convenient and time efficient for the user.
 
-![screenshot](documentation/feature16.jpg)
+    ![screenshot](documentation/feature16.jpg)
 
 - **Payment Details #17**
 
     - The payment form also had a header of payment details in a heading so the user can see what information needs to be input in this section of the page. Just like the basket page I broken the page into 2 halves and have the checkout form on one half followed by the payment section on the other half so the user can easily identify what information goes where. The order total is displayed again in black bold font so the customer knows how much the order total is just before payment including delivery.
     Again included a highlighted green button as used on every other checkout button through the site so the customers knows the green buttons relate to the basket/checkout but this time it has the text 'Complete Order' to finalise the purchase.  
 
-![screenshot](documentation/feature17.jpg)
+    ![screenshot](documentation/feature17.jpg)
 
 - **Order Confirmation #19**
 
     - The order confirmation page is a simple page which displays once the user has made a purchase and includes all the information summarised in the order so the user can check it all again and keep as a receipt. All of the font is displayed in black with the headings in a bold font. 
 
-![screenshot](documentation/feature19.jpg)
+    ![screenshot](documentation/feature19.jpg)
 
 - **Toast alerts #20**
 
     - When the user or admin is using the sites there are many toaster alerts keeping them updated with any changed, removed or informative information to make sure the user or admin assured that their actions have been successful or unsuccesful.
 
-![screenshot](documentation/feature20.jpg)
+    ![screenshot](documentation/feature20.jpg)
 
 - **Profile #21**
 
     - The Profile form has a header clearly labelling 'My profile' with a subheader explaining the information in the form is their 'Default information'. The form includes 6 inputs for the address information and a dropdown for the countries to make sure all users conform to the correct country format.
     They are then presented with a dark grey box with white text that says 'Update information' so that the users can update their address if it changes anytime to make sure if they save their information on payment their correct address will pre-fill in the boxes upon checkout. 
 
-![screenshot](documentation/feature21.jpg)
+    ![screenshot](documentation/feature21.jpg)
 
 - **Order History #22**
 
     - Also on the profile page, there is an order history section on the right side of the page as I have again chosen to split the layout into 2 so the users can clearly see the information without scrolling on larger screen sizes. I have again used a table with a table header that includes bold black text with the headings Order Number, date, items, and order total so if customers want to refer back to their previous orders they have all the information on the purchase. The information is then sectioned into row so the users can read the information easily.
     Each order number is a blue colour to show they are a link and when clicked on it displays the order confirmation of that particular order no matter what date it is. This is beneficial for the business owner also as it means if customer wanted to purchase the same cake/order as last time but cannot remebered the name of the product they can simply look back on their order confirmation.
 
-![screenshot](documentation/feature22.jpg)
+    ![screenshot](documentation/feature22.jpg)
 
 - **Edit/delete buttons for admin #23**
 
     - The edit and delete button is only displayed for the admin of the site and when the edit button is clicked it is automatically filled with the details of the selected product the admin wants to edit, so they can edit what they need accordingly and then select 'Update Product' to update the details. The edit button is again in a blue text so the admin relates to it as a link and the delete buttons are in a danger red colour as they should be careful clicking that unless they are certain. Once the item is clicked on delete the item is deleted from the site and admin instantly so the user can immediatley update their site with any changes. The edit and delete button are displayed both on the product images and product description for ease of use for the admin users.
 
-![screenshot](documentation/feature23.jpg)
+    ![screenshot](documentation/feature23.jpg)
 
 - **Add/Edit Product #24**
 
     - Add event is the same style form as the edit form on the site so that the admin becomes familiar with the structure and layout of the forms and again, the form is also responsive so it can be used well on all different sized devices. The inputs include product category, name, description, price, image, nutritional & allergen information amd sale information followed by the add/edit button on the bottom of the form to simply add or edit the event. In case of the admin changing their mind, I have also included a cancel button should they need to return to the page if they decide not to add or edit a product to make sure that they don't need to use the back button on the browsers site.
 
-![screenshot](documentation/feature24.jpg)
+    ![screenshot](documentation/feature24.jpg)
 
 - **Contact infograph #25**
 
     - On the contact form there are 3 large black outlined logos that users should be familiar with so they can easily locate what type of contact method they are needed. They are black and outlined to blend with the style and theme of the site of being minimal and they can easily find the contact, email and location details of the business.
 
-![screenshot](documentation/feature25.jpg)
+    ![screenshot](documentation/feature25.jpg)
 
 - **Contact Form #26**
 
     - The page also provides an email form so the customer can emails us directly from that page of the site rather than having to go to an external website to email us. The form contains 4 inputs, name, email, contact number and message so its simple to understand again followed by a dark grey send button to make it clear how to send the form to customers. 
 
-![screenshot](documentation/feature26.jpg)
+    ![screenshot](documentation/feature26.jpg)
 
 - **Sale feature #27**
 
     - On the product cards I have also included a sale feature so that if the cupcakes are on offer it will display the original price in red and a strike through it with the new price next to it in bold so the users are clear on how much it has been discounted to and what the new price is. 
     To also make it more eyecatching for the users I have included a sale badge of the top right corner of the card images so the sale products are clearly labelled when the user is not specifically on the special offers page.
 
-![screenshot](documentation/feature27.jpg)
+    ![screenshot](documentation/feature27.jpg)
 
 - **Search Results #28**
 
     - On each page of the our products page includes the name of the category in the top right corner of the pages followed by the number of returned results for that category or search. It is also the same if customers search with the search input box in the navbar, it will return the number of related search results for that product name. The category name is in a black poppins font and the results are in a bold black font so it is noticeable to the users.
 
-![screenshot](documentation/feature28.jpg)
+    ![screenshot](documentation/feature28.jpg)
 
 - **Category page heading #29**
 
     - I have added custom page headers for each page so the users know instantly what products are displayed on that page and where to look for the short description which explains each page. For example, the all cupcakes product page has the title All Cupcakes, the winter collection has the title 'Winter Collection' and the same for each other page.
 
-![screenshot](documentation/feature29.jpg)
+    ![screenshot](documentation/feature29.jpg)
 
 - **Sign in, Register and log out #30**
 
@@ -331,6 +331,11 @@ Newsletter
     The log out option follows the same theme of the header stating the 'Log out' page and then a statement checking that they definately want to log out incase the user has clicked the button by mistake. The user then has the options to cancel or continue to log out again following the colour theme of black and white.
 
     ![screenshot](documentation/feature30.jpg)
+
+- **Error 404 and 500 pages #31**
+    - On live site I have made sure that the error 404 and 500 display if the users lands on any of these errors making the page a bit more user-friendly and applying a 'return home' dark grey background button with white text to make sure they have an easy link back to the homepage should either of these errors appear. The value this could bring is to keep the customers on the site page and avoid them becoming frustrated and leaving the page as they don't have a simple button back to the site.
+
+    ![screenshot](documentation/feature31.jpg)
 
 
 ### Future Features
