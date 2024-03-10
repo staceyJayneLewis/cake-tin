@@ -433,6 +433,17 @@ from the respective feature.
 
     - The solution was to make sure there were not existing orders in the admin of the site as this was causing confusion with the new country field as the country names were more than 2 characters. Once I migrated back to previous migration and deleted the existing order on the admin and added the country field again it was all fixed.
 
+- Footer is within the container in the profile page
+
+    ![screenshot](documentation/bug21.png)
+
+    - After looking over my profile code and formatting the code I realised I had not closed a div tag which was causing the problem, as soon as I closed the div tags it fixed the issue.
+
+- ValueError at /products/23/ - The 'image' attribute has no file
+
+    ![screenshot](documentation/bug22.png)
+
+    - After help from my mentor Tim we established that the issue was the python file I was using and I needed to add the runtime file to the project which solved the problem of these errors appearing.
 
 ## Unfixed Bugs
 
