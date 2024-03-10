@@ -10,7 +10,7 @@
 {% block content %}
 <div id="basket-page" class="container pt-5">
     <div class="row" >
-        <div class="col-12 col-md-8">
+        <div class="col-12 col-lg-8">
             <h3>Your basket</h3>
             {% if basket_items %}
                 <table class="table">
@@ -76,7 +76,7 @@
             {% endif %}
         </div>
         {% if basket_items %}
-            <div class="col-12 col-md-4">
+            <div class="col-12 col-lg-4">
                 <h3 class="pb-3">Order Summary</h3>
                     <p>Subtotal: £{{ sub_total|floatformat:2 }}</p>
                     <p>Delivery: £{{ delivery|floatformat:2 }}</p>
