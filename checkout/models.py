@@ -12,7 +12,7 @@ from profiles.models import UserProfile
 
 
 class Order_details(models.Model):
-    class Meta: 
+    class Meta:
         verbose_name_plural = 'Orders'
 
     order_number = models.CharField(max_length=100, null=False, editable=False)
@@ -48,7 +48,7 @@ class Order_details(models.Model):
 
         self.sub_total = self.items_ordered.aggregate(
             Sum('item_ordered_total'))['item_ordered_total__sum'] or 0
-        self.delivery =  Decimal(settings.STANDARD_DELIVERY)
+        self.delivery = Decimal(settings.STANDARD_DELIVERY)
         self.order_total = self.sub_total + self.delivery
         self.save()
 
@@ -62,8 +62,8 @@ class Order_details(models.Model):
         return self.order_number
 
 
-class Item_ordered(models.Model):   
-    class Meta: 
+class Item_ordered(models.Model):
+    class Meta:
         verbose_name_plural = 'Items'
 
     order = models.ForeignKey(

@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from products.models import Product
 
+
 def index(request):
     """Return to the index page """
     products = Product.objects.order_by('?')[:4]

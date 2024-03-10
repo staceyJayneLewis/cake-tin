@@ -1,4 +1,4 @@
-from django.shortcuts import render, reverse, redirect, get_object_or_404, HttpResponse
+from django.shortcuts import render, reverse, redirect, get_object_or_404, HttpResponse  # noqa
 from django.contrib import messages
 from django.conf import settings
 from django.views.decorators.http import require_POST
@@ -13,21 +13,24 @@ from basket.contexts import basket_order
 import stripe
 import json
 
+
 @require_POST
 def cache_checkout_data(request):
-        try:
-            pid = request.POST.get('client_secret').split('_secret')[0]
-            stripe.api_key = settings.STRIPE_SECRET_KEY
-            stripe.PaymentIntent.modify(pid, metadata={
-                'basket_session': json.dumps(request.session.get('basket_session', {})),
-                'save_info': request.POST.get('save_info'),
-                'username': request.user,
-            })
-            return HttpResponse(status=200)
-        except Exception as e:
-            messages.error(request, 'Sorry, your payment cannot be \
-                processed right now. Please try again later.')
-            return HttpResponse(content=e, status=400)
+    try:
+        pid = request.POST.get('client_secret').split('_secret')[0]
+        stripe.api_key = settings.STRIPE_SECRET_KEY
+        stripe.PaymentIntent.modify(pid, metadata={
+            'basket_session': json.dumps(request.session.get(
+                'basket_session', {})),
+            'save_info': request.POST.get('save_info'),
+            'username': request.user,
+        })
+        return HttpResponse(status=200)
+    except Exception as e:
+        messages.error(request, 'Sorry, your payment cannot be \
+            processed right now. Please try again later.')
+        return HttpResponse(content=e, status=400)
+
 
 def checkout(request):
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
@@ -67,16 +70,17 @@ def checkout(request):
 
                 except Product.DoesNotExist:
                     messages.error(request, (
-                        "There was an issue with an item in your basket, please contact us.")
+                        "There's an issue with your item, please contact us.")
                     )
                     order.delete()
                     return redirect(reverse('basket'))
 
             request.session['save_info'] = 'save-details' in request.POST
-            return redirect(reverse('checkout_success', args=[order.order_number]))
+            return redirect(reverse(
+                'checkout_success', args=[order.order_number]))
         else:
             messages.error(
-                request, 
+                request,
                 'There was an error with your form, please correct any errors.'
             )
     else:
@@ -89,7 +93,8 @@ def checkout(request):
         total = current_basket['order_total']
         stripe_amount = round(total * 100)
         stripe.api_key = stripe_secret_key
-        intent = stripe.PaymentIntent.create(amount=stripe_amount, currency=settings.STRIPE_CURRENCY)
+        intent = stripe.PaymentIntent.create(
+            amount=stripe_amount, currency=settings.STRIPE_CURRENCY)
 
         if request.user.is_authenticated:
             try:
@@ -121,6 +126,7 @@ def checkout(request):
     }
 
     return render(request, template, context)
+
 
 def checkout_success(request, order_number):
     """

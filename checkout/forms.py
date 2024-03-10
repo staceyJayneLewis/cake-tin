@@ -1,10 +1,13 @@
 from django import forms
 from .models import Order_details
 
+
 class form_order_request(forms.ModelForm):
     class Meta:
         model = Order_details
-        fields = ('full_name','address_line_1', 'address_line_2','town_or_city', 'postcode', 'country','email', 'contact_number')
+        fields = ('full_name', 'address_line_1', 'address_line_2',
+                  'town_or_city', 'postcode', 'country', 'email',
+                  'contact_number')
 
     def __init__(self, *args, **kwargs):
         """Add placeholders """

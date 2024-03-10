@@ -74,38 +74,30 @@ I have used the recommended [PEP8 CI Python Linter](https://pep8ci.herokuapp.com
 | newsletter/models.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/staceyJayneLewis/cake-tin/main/newsletter/models.py) | ![screenshot](documentation/python-products-models.jpg) | Pass: No Errors |
 | newsletter/forms.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/staceyJayneLewis/cake-tin/main/newsletter/forms.py) | ![screenshot](documentation/python-newsletter-forms.jpg) | Pass: No Errors |
 | newsletter/admin.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/staceyJayneLewis/cake-tin/main/newsletter/admin.py) | ![screenshot](documentation/python-newsletter-admin.jpg) | Pass: No Errors |
+| home/views.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/staceyJayneLewis/cake-tin/main/home/views.py) | ![screenshot](documentation/python-home-views.jpg) | Pass: No Errors |
+| home/urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/staceyJayneLewis/cake-tin/main/home/urls.py) | ![screenshot](documentation/python-home-urls.jpg) | Pass: No Errors |
+| contact/views.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/staceyJayneLewis/cake-tin/main/contact/views.py) | ![screenshot](documentation/python-contact-views.jpg) | Pass: No Errors |
+| contact/urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/staceyJayneLewis/cake-tin/main/contact/urls.py) | ![screenshot](documentation/python-contact-urls.jpg) | Pass: No Errors |
+| contact/models.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/staceyJayneLewis/cake-tin/main/contact/models.py) | ![screenshot](documentation/python-contact-models.jpg) | Pass: No Errors |
+| contact/forms.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/staceyJayneLewis/cake-tin/main/contact/forms.py) | ![screenshot](documentation/python-contact-forms.jpg) | Pass: No Errors |
+| contact/admin.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/staceyJayneLewis/cake-tin/main/contact/admin.py) | ![screenshot](documentation/python-contact-admin.jpg) | Pass: No Errors |
+| checkout/webhooks.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/staceyJayneLewis/cake-tin/main/checkout/webhooks.py) | ![screenshot](documentation/python-checkout-webhooks.jpg) | Pass: No Errors noqa added as line too long and template url could not be split |
+| checkout/webhook-handler.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/staceyJayneLewis/cake-tin/main/checkout/webhook_handler.py) | ![screenshot](documentation/python-checkout-webhook-handler.jpg) | Pass: No Errors noqa added as line too long and f strings should not be split |
+| checkout/views.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/staceyJayneLewis/cake-tin/main/checkout/views.py) | ![screenshot](documentation/python-checkout-views.jpg) | Pass: No Errors noqa added as line could not be split |
+| checkout/urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/staceyJayneLewis/cake-tin/main/checkout/urls.py) | ![screenshot](documentation/python-checkout-urls.jpg) | Pass: No Errors |
+| checkout/signals.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/staceyJayneLewis/cake-tin/main/checkout/signals.py) | ![screenshot](documentation/python-checkout-signals.jpg) | Pass: No Errors |
+| checkout/models.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/staceyJayneLewis/cake-tin/main/checkout/models.py) | ![screenshot](documentation/python-checkout-models.jpg) | Pass: No Errors |
+| checkout/models.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/staceyJayneLewis/cake-tin/main/checkout/models.py) | ![screenshot](documentation/python-checkout-models.jpg) | Pass: No Errors |
+| checkout/forms.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/staceyJayneLewis/cake-tin/main/checkout/forms.py) | ![screenshot](documentation/python-checkout-forms.jpg) | Pass: No Errors |
+| checkout/app.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/staceyJayneLewis/cake-tin/main/checkout/apps.py) | ![screenshot](documentation/python-checkout-apps.jpg) | Pass: No Errors |
+| checkout/admin.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/staceyJayneLewis/cake-tin/main/checkout/admin.py) | ![screenshot](documentation/python-checkout-admin.jpg) | Pass: No Errors |
+| cake_tin/urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/staceyJayneLewis/cake-tin/main/cake_tin/urls.py) | ![screenshot](documentation/python-caketin-urls.jpg) | Pass: No Errors |
+| cake_tin/settings.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/staceyJayneLewis/cake-tin/main/cake_tin/settings.py) | ![screenshot](documentation/python-caketin-settings.jpg) | Pass: No Errors noqa added for auth password validators |
+| basket/views.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/staceyJayneLewis/cake-tin/main/basket/views.py) | ![screenshot](documentation/python-basket-views.jpg) | Pass: No Errors |
+| basket/urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/staceyJayneLewis/cake-tin/main/basket/urls.py) | ![screenshot](documentation/python-basket-urls.jpg) | Pass: No Errors |
+| basket/contexts.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/staceyJayneLewis/cake-tin/main/basket/contexts.py) | ![screenshot](documentation/python-basket-contexts.jpg) | Pass: No Errors |
+| basket/templatetags/basket-tools.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/staceyJayneLewis/cake-tin/main/basket/templatetags/basket_tools.py) | ![screenshot](documentation/python-basket-basket-tools.jpg) | Pass: No Errors |
 
-
-**IMPORTANT**: Django settings.py
-
-The Django settings.py file comes with 4 lines that are quite long, and will throw the `E501 line too long` error.
-This is default behavior, but can be fixed by adding `# noqa` to the end of those lines.
-
-Example:
-
-```python
-AUTH_PASSWORD_VALIDATORS = [
-    {
-        "NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator",  # noqa
-    },
-    {
-        "NAME": "django.contrib.auth.password_validation.MinimumLengthValidator",  # noqa
-    },
-    {
-        "NAME": "django.contrib.auth.password_validation.CommonPasswordValidator",  # noqa
-    },
-    {
-        "NAME": "django.contrib.auth.password_validation.NumericPasswordValidator",  # noqa
-    },
-]
-```
-
-**IMPORTANT**: migration and pycache files
-
-You do not have to ever validate files from the `migrations/` or `pycache/` folders!
-Ignore these `.py` files, and validate just the files that you've created or modified.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
 
 ## Browser Compatibility
 
