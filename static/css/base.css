@@ -231,8 +231,8 @@ select option[value=""] {
 /* Media queries */
 @media screen and (min-width: 768px) {
     .first-column {
-        padding-top: 0;
-        padding-bottom: 0;
+        padding-top: 15%;
+        padding-bottom: 15%;
     }
 
     .contact-info {
@@ -251,6 +251,13 @@ select option[value=""] {
 
     footer ul {
         margin: 0;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .first-column {
+        padding-top: 0;
+        padding-bottom: 0;
     }
 }
 
