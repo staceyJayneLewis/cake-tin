@@ -325,47 +325,114 @@ from the respective feature.
 
 ## Bugs
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-This section is primarily used for JavaScript and Python applications,
-but feel free to use this section to document any HTML/CSS bugs you might run into.
-
-It's very important to document any bugs you've discovered while developing the project.
-Make sure to include any necessary steps you've implemented to fix the bug(s) as well.
-
-**PRO TIP**: screenshots of bugs are extremely helpful, and go a long way!
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-- JS Uncaught ReferenceError: `foobar` is undefined/not defined
+- Form input not filtering products. When I am inputting a word to search it is not refining the products it is just bringing up all the products instead. For example in this screenshot I have searched 'Mint' which should bring up 1 result however it has brought all products up.
 
     ![screenshot](documentation/bug01.png)
 
-    - To fix this, I _____________________.
+    - To fix this, I checked the form on the base.html and I noticed I didn't include a name attribute for the input of the form and knowing that python uses name attribute to search queries I needed to include the name='q' for this to work.
 
-- JS `'let'` or `'const'` or `'template literal syntax'` or `'arrow function syntax (=>)'` is available in ES6 (use `'esversion: 11'`) or Mozilla JS extensions (use moz).
+- Template syntax error at /
 
     ![screenshot](documentation/bug02.png)
 
-    - To fix this, I _____________________.
+    - To fix this, after reviewing the queries and categories video section where it shows you how to refine categories I noticed that I refined the category inside the template tags for the url but it should infact be outside of the tag brackets.
+    Once I updated this I can see it worked on the url bar however no products are displaying at the moment, however I will raise this as a new issue.
 
-- Python `'ModuleNotFoundError'` when trying to import module from imported package
+- When clicking on product categories no products are displaying.
 
     ![screenshot](documentation/bug03.png)
 
-    - To fix this, I _____________________.
+    - To fix this, After researching for a solution to this on google and also referring back to the queries and categories part 2 video I noticed that I was missing the split(',') method to split the categories in the url and so when I applied this it instantly worked.
 
-- Django `TemplateDoesNotExist` at /appname/path appname/template_name.html
+- No reverse match at add_basket
 
-    ![screenshot](documentation/bug04.png)
+    ![screenshot](documentation/bug05.png)
 
-    - To fix this, I _____________________.
+    - To fix this, After checking the bug error and researching it on google (I included the source in the credits) I discovered that I was missing the product.id and so the template was only sending one parameter through to the view.
 
-- Python `E501 line too long` (93 > 79 characters)
 
-    ![screenshot](documentation/bug04.png)
+- Error: You are trying to add a non-nullable field 'allergen' to product without a default; we can't do that
 
-    - To fix this, I _____________________.
+    ![screenshot](documentation/bug06.png)
+
+    - To fix this, after doing some research on the above pages it advised that I needed to add a default parameter for the fields and so once added the 'null'=true it worked as it should.(Again, source included in credits)
+
+- int() argument must be a string, a bytes-like object or a number, not 'NoneType'
+
+    ![screenshot](documentation/bug07.png)
+
+    - To fix this,I realised that I was missing an int() around the quantity variable value as it needs to be converted to interger since the select options data type are strings.
+
+- Footer not displaying as block element on mobile view.
+
+    ![screenshot](documentation/bug08.png)
+
+    - To fix this, As you can see above for the mobile view the footer is overlapping the content of the carousel and has no background however on the larger screens its works as expected.
+    After checking over my code I noticed that I had a height calculation 'height: calc(100vh - 65px) ' on the home page feature and once commented out the problem was solved, so I removed that bit of code as it is no longer needed.
+
+- (admin.E103) The value of 'inlines' must be a list or tuple.
+
+    ![screenshot](documentation/bug09.png)
+
+    - To fix this, After having the same message for the read only fields also, I did some research and realised that as it is a tuple I need to include a comma even though there only 1 element in it.
+
+- Reverse for 'products' not found. 'products' is not a valid view function or pattern name.
+
+    ![screenshot](documentation/bug10.png)
+
+    - To fix this, I discovered the issue was in the products view, I used the functions name rather than the view name on that reverse request which is why it was causing the error.
+
+- Image has spacing above the price of the winter collection category images
+
+    ![screenshot](documentation/bug11.png)
+
+    - To fix this, I noticed that some of the images with the white backgrounds are different sizes to the cakes images with black backgrounds. After adjusting the image sizes of the white background images to match the sizes of images with black backgrounds it solved the issue of the spacing as the card height's were now able to all be the same.
+
+- Overflow of the products overlay the footer if more than 2 products added to the basket.
+
+    ![screenshot](documentation/bug13.png)
+
+    - To fix this, After looking over my code it seems some styling I added on the basket page previously is what is causing the issue. I have displayed this in the working tree changes so you can see what I removed for it to work again.
+
+- Subtotal not displaying the amount when added to basket, it just displays basket order total.
+
+    ![screenshot](documentation/bug14.png)
+
+    - To fix this, an if statement in the success toaster code for when the total amount of items is above 0.
+
+- AuthenticationError at /checkout/
+
+    ![screenshot](documentation/bug15.png)
+
+    - To fix this, After adding my variables to the env.py file instead of using the gitpod environ variables the issue was resolved. It seemed that the env,py may have been causing confusing with the communication when importing the variable keys.
+
+- Internal error when trying to view my deployed website on heroku
+
+    ![screenshot](documentation/bug16.png)
+    ![screenshot](documentation/bug16a.png)
+
+    - To fix this, After discovering this is the reason I realises i did not add stripe to the requirements.txt file, after I added the stripe to that file and pushed to heroku it now successfullly works.
+
+- Uncaught IntegrationError: Invalid value for stripe.confirmCardPayment intent secret
+
+    ![screenshot](documentation/bug18.png)
+    ![screenshot](documentation/bug18a.png)
+
+    - To fix this, After checking over my code again in the context I noticed I put quotation marks on the value of the intent key and the public key, once removed the issue was fixed. I have put a screenshot of the change below.
+
+- Uncaught IntegrationError: Please call Stripe() with your publishable key. You used an empty string.
+
+    ![screenshot](documentation/bug19.png)
+    ![screenshot](documentation/bug19a.png)
+
+    - To fix this, After tracing back over the code and help from tutor support I seemed to have a post load js code in the checkout success document as well as the checkout page which was not needed as you can see below in the migration changes tree.
+
+- Value too long for type character varying(2) for CountryField
+
+    ![screenshot](documentation/bug20.png)
+
+    - The solution was to make sure there were not existing orders in the admin of the site as this was causing confusion with the new country field as the country names were more than 2 characters. Once I migrated back to previous migration and deleted the existing order on the admin and added the country field again it was all fixed.
+
 
 ## Unfixed Bugs
 
