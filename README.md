@@ -58,7 +58,7 @@ I used [coolors.co](https://coolors.co/d3d3d3-343a40-000000-ffffff) to generate 
 - As a new site user, I would like to easily search for a particular cake, so that I do not have to scroll through each product to get to what I am looking for. 
 - As a new site user, I would like to easily be able to select a quantity of cakes, so that I know how much exactly I am purchasing. 
 - As a new site user, I would like to easily be able to view items in my bag that I can check what I am purchasing again before payment.
-- As a new site user, I would like to receive and view and order confirmation email so that I can verify my order is complete.
+- As a new site user, I would like to receive and view and order confirmation message so that I can verify my order is complete.
 - As a new or existing site user I would like to be able to enter payment details so I can simply purchase the good I would like.
 
 ### Returning Site Users
@@ -76,7 +76,7 @@ I used [coolors.co](https://coolors.co/d3d3d3-343a40-000000-ffffff) to generate 
 - As a site administrator, I should be able to edit products, so that I can edit any items that need amending such a price etc.
 - As a site administrator, I should be able to delete products, so that I can remove any products no longer on sale.
 - As a site administrator, I should be able to section products into categories, so that I can organise the products easily.
-- As a site administrator, I should be able to easily manage my account, so that I can keep the website up to date.
+- As a site administrator, I should be able to easily put items on sale, so that I can put special offers on if I want to.
 
 ## Wireframes
 

@@ -300,28 +300,36 @@ The aforementioned tests are just an example of a few different project scenario
 
 ## User Story Testing
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+### New Site Users
 
-Testing user stories is actually quite simple, once you've already got the stories defined on your README.
+| As a new site user, I would like to register for an account, so that I can have my own account. | ![screenshot](documentation/register.jpg) |
+| As a new site user, I would like to create a secure password, so that I can be assured my account is secure. | ![screenshot](documentation/register-password.jpg) |
+| As a new site user, I would like to view the selection of cakes, so that I can see what the product looks like. | ![screenshot](documentation/feature7.jpg) |
+| As a new site user, I would like to see a product description page, so that I can see the price, product description, image and nutrition & allergy details. | ![screenshot](documentation/prod-description.jpg) |
+| As a new site user, I would like to easily see offer or sale products, so that I can get a good deal which may persuade me to be a returning customer. | ![screenshot](documentation/sale.jpg) |
+| As a new site user, I would like to easily search for a particular cake, so that I do not have to scroll through each product to get to what I am looking for. | ![screenshot](documentation/feature1.jpg) |
+| As a new site user, I would like to easily be able to select a quantity of cakes, so that I know how much exactly I am purchasing. | ![screenshot](documentation/feature8.jpg) |
+| As a new site user, I would like to easily be able to view items in my bag that I can check what I am purchasing again before payment. | ![screenshot](documentation/chrome-basket.jpg) |
+| As a new site user, I would like to receive and view and order confirmation message so that I can verify my order is complete. | ![screenshot](documentation/feature19.jpg) |
+| As a new or existing site user I would like to be able to enter payment details so I can simply purchase the good I would like. | ![screenshot](documentation/feature17.jpg) |
 
-Most of your project's **features** should already align with the **user stories**,
-so this should as simple as creating a table with the user story, matching with the re-used screenshot
-from the respective feature.
+### Returning Site Users
 
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+| As a returning site user, I would like to simply log in and log out, so that I can easily access my profile page. | ![screenshot](documentation/feature30.jpg) |
+| As a returning site user, I would like to have my own profile, so that I can save payment information and view order history.| ![screenshot](documentation/chrome-profile.jpg) |
+| As a returning site user, I would like to recover my password if I have forgotten it, so that I can gain access back to my account. | ![screenshot](documentation/forgot-password.jpg) |
+| As a returning site user, have visual sight of my shopping basket , so that I can keep track of the total amount I am spending to make sure it is affordable for me.| ![screenshot](documentation/feature1.jpg) |
+| As a returning site user, I would like to see a list of categories of cake types, so that I can easily navigate to the product I want such a new collection or offers and sales.| ![screenshot](documentation/feature5.jpg) |
+| As a returning site user, I would like to view recent purchases, so that I don't have to go searching for a product I purchased previously or have to retype the product each time.| ![screenshot](documentation/feature22.jpg) |
 
-| User Story | Screenshot |
-| --- | --- |
-| As a new site user, I would like to ____________, so that I can ____________. | ![screenshot](documentation/feature01.png) |
-| As a new site user, I would like to ____________, so that I can ____________. | ![screenshot](documentation/feature02.png) |
-| As a new site user, I would like to ____________, so that I can ____________. | ![screenshot](documentation/feature03.png) |
-| As a returning site user, I would like to ____________, so that I can ____________. | ![screenshot](documentation/feature04.png) |
-| As a returning site user, I would like to ____________, so that I can ____________. | ![screenshot](documentation/feature05.png) |
-| As a returning site user, I would like to ____________, so that I can ____________. | ![screenshot](documentation/feature06.png) |
-| As a site administrator, I should be able to ____________, so that I can ____________. | ![screenshot](documentation/feature07.png) |
-| As a site administrator, I should be able to ____________, so that I can ____________. | ![screenshot](documentation/feature08.png) |
-| As a site administrator, I should be able to ____________, so that I can ____________. | ![screenshot](documentation/feature09.png) |
-| repeat for all remaining user stories | x |
+### Site Admin
+
+| As a site administrator, I should be able to add new products, so that I can add new items to my store.| ![screenshot](documentation/feature24.jpg) |
+| As a site administrator, I should be able to edit products, so that I can edit any items that need amending such a price etc.| ![screenshot](documentation/feature24.jpg) |
+| As a site administrator, I should be able to delete products, so that I can remove any products no longer on sale.| ![screenshot](documentation/feature23.jpg) |
+| As a site administrator, I should be able to section products into categories, so that I can organise the products easily.| ![screenshot](documentation/prod-cat.jpg) |
+| As a site administrator, I should be able to easily put items on sale, so that I can put special offers on if I want to.| ![screenshot](documentation/prod-sale.jpg) |
+
 
 ## Bugs
 
