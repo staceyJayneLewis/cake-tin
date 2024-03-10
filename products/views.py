@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect,reverse, get_object_or_404
+from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
 from django.contrib.auth.decorators import login_required
@@ -15,22 +15,22 @@ def all_products(request):
 
     if request.GET:
         if 'category' in request.GET:
-                categories = request.GET['category'].split(',')
-                products = products.filter(category__name__in=categories)
-                categories = Category.objects.filter(name__in=categories).first()
-                    
+            categories = request.GET['category'].split(',')
+            products = products.filter(category__name__in=categories)
+            categories = Category.objects.filter(name__in=categories).first()
+
         if 'q' in request.GET:
             search_request = request.GET['q']
             if not search_request:
-                messages.error(request, "You didn't enter a product to search, please enter the product you are searching for.")
+                messages.error(request, "You didn't enter a product to search")
                 return redirect(reverse('all_products'))
 
-            search_requests = Q(name__icontains=search_request) | Q(description__icontains=search_request)
+            search_requests = Q(name__icontains=search_request) | Q(description__icontains=search_request)  # noqa
             products = products.filter(search_requests)
 
     context = {
         'products': products,
-        'search_query':search_request,
+        'search_query': search_request,
         'current_category': categories,
     }
 
@@ -40,7 +40,7 @@ def all_products(request):
 def product_description(request, product_id):
     """ Displays product description page """
 
-    product = get_object_or_404(Product, pk=product_id )
+    product = get_object_or_404(Product, pk=product_id)
 
     context = {
         'product': product,
@@ -61,9 +61,11 @@ def add_product(request):
         if form.is_valid():
             product = form.save()
             messages.success(request, 'Successfully added product!')
-            return redirect(reverse('product_description',args=[product.id]))
+            return redirect(reverse('product_description', args=[product.id]))
         else:
-            messages.error(request, 'Unable to add product. Please ensure the form is valid.')
+            messages.error(
+                request,
+                'Unable to add product. Please ensure the form is valid.')
     else:
         form = ProductFormAdmin()
 
@@ -90,7 +92,8 @@ def edit_product(request, product_id):
             messages.success(request, 'Successfully updated product!')
             return redirect(reverse('product_description', args=[product.id]))
         else:
-            messages.error(request, 'Could not update product. Please ensure the form is filled in correctly.')
+            messages.error(request,
+                           'Could not update product. Please check form.')
     else:
         form = ProductFormAdmin(instance=product)
         messages.success(request, f'Edit {product.name}')

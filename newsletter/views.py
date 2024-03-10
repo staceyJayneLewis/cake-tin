@@ -23,4 +23,3 @@ def newsletter_subscription(request):
         "form": form,
     }
     return render(request, template, context)
-    
