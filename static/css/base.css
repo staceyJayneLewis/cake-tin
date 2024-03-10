@@ -237,7 +237,6 @@ select option[value=""] {
 
     .contact-info {
         text-align: center;
-        height: calc(100vh - 70px);
         padding-top: 0;
     }
 
