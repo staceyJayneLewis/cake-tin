@@ -120,17 +120,17 @@ I've tested my deployed project on multiple devices to check for responsiveness 
 | Mobile (DevTools) | ![screenshot](documentation/mobile-devtools-home.jpg) | ![screenshot](documentation/mobile-devtools-products.jpg) | ![screenshot](documentation/mobile-devtools-contact.jpg) | ![screenshot](documentation/mobile-devtools-profile.jpg) | ![screenshot](documentation/mobile-devtools-manage-account.jpg) | Works as expected |
 | Tablet (DevTools) | ![screenshot](documentation/tablet-devtools-home.jpg) | ![screenshot](documentation/tablet-devtools-product.jpg) | ![screenshot](documentation/tablet-devtools-contact.jpg) | ![screenshot](documentation/tablet-devtools-profile.jpg) | ![screenshot](documentation/tablet-devtools-manage-account.jpg) | Works as expected |
 | Desktop | ![screenshot](documentation/chrome-home.jpg) | ![screenshot](documentation/chrome-products.jpg) | ![screenshot](documentation/chrome-contact.jpg) | ![screenshot](documentation/chrome-profile.jpg) | ![screenshot](documentation/chrome-manage-account.jpg) | Works as expected |
+| Huawei p20 pro | ![screenshot](documentation/huawei-home.jpg) | ![screenshot](documentation/huawei-products.jpg) | ![screenshot](documentation/huawei-contact.jpg) | ![screenshot](documentation/huawei-profile.jpg) | ![screenshot](documentation/huawei-manage-account.jpg) | Works as expected |
+| Google Pixel 7 | ![screenshot](documentation/google-home.jpeg) | ![screenshot](documentation/google-products.png) | ![screenshot](documentation/google-contact.png) | ![screenshot](documentation/google-profile.png) | ![screenshot](documentation/google-manage-account.png) | Works as expected |
 
 | Devices | Basket | Prod description | Checkout | Edit | Register | Sign in | Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | Mobile (DevTools) | ![screenshot](documentation/mobile-devtools-basket.jpg) | ![screenshot](documentation/mobile-devtools-productdescription.jpg) | ![screenshot](documentation/mobile-devtools-checkout-success.jpg) | ![screenshot](documentation/mobile-devtools-edit.jpg) | ![screenshot](documentation/mobile-devtools-register.jpg) | ![screenshot](documentation/mobile-devtools-sign-in.jpg) | Works as expected |
 | Tablet (DevTools) | ![screenshot](documentation/tablet-devtools-basket.jpg) | ![screenshot](documentation/tablet-devtools-product-description.jpg) | ![screenshot](documentation/tablet-devtools-checkout-success.jpg) | ![screenshot](documentation/tablet-devtools-edit.jpg) | ![screenshot](documentation/tablet-devtools-register.jpg) | ![screenshot](documentation/tablet-devtools-sign-in.jpg) | Works as expected |
 | Desktop | ![screenshot](documentation/chrome-basket.jpg) | ![screenshot](documentation/prod-description.jpg) | ![screenshot](documentation/chrome-checkout-success.jpg) | ![screenshot](documentation/chrome-edit.jpg) | ![screenshot](documentation/chrome-register.jpg) | ![screenshot](documentation/chrome-sign-in.jpg) | Works as expected |
+| Huawei p20 pro | ![screenshot](documentation/huawei-basket.jpg) | ![screenshot](documentation/huawei-prod-desc.jpg) | ![screenshot](documentation/huawei-checkout-success.jpg) | ![screenshot](documentation/huawei-edit.jpg) | ![screenshot](documentation/huawei-register.jpg) | ![screenshot](documentation/huawei-sign-in.jpg) | Works as expected |
+| Google pixel 7 | ![screenshot](documentation/google-basket.png) | ![screenshot](documentation/google-prod-desc.png) | ![screenshot](documentation/google-checkout-success.png) | ![screenshot](documentation/google-edit.png) | ![screenshot](documentation/google-register.png) | ![screenshot](documentation/google-sign-in.png) | Works as expected |
 
-
-| Google Pixel 7 | ![screenshot](documentation/responsive-pixel-home.png) | ![screenshot](documentation/responsive-pixel-about.png) | ![screenshot](documentation/responsive-pixel-contact.png) | ![screenshot](documentation/responsive-pixel-etc.png) | Works as expected |
-
-| Huawei p20 pro | ![screenshot](documentation/responsive-iphone-home.png) | ![screenshot](documentation/responsive-iphone-about.png) | ![screenshot](documentation/responsive-iphone-contact.png) | ![screenshot](documentation/responsive-iphone-etc.png) | Works as expected |
 
 ## Lighthouse Audit
 
