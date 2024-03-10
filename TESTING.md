@@ -105,7 +105,7 @@ I have used the recommended [PEP8 CI Python Linter](https://pep8ci.herokuapp.com
 I've tested my deployed project on multiple browsers to check for compatibility issues.
 
 | Browser | Home | Product page | Contact | Profile | Manage account | Basket | Notes |
-| --- | --- | --- | --- | --- | --- |
+| --- | --- | --- | --- | --- | --- | --- | --- |
 | Chrome | ![screenshot](documentation/chrome-home.jpg) | ![screenshot](documentation/chrome-products.jpg) | ![screenshot](documentation/chrome-contact.jpg) | ![screenshot](documentation/chrome-profile.jpg) | ![screenshot](documentation/chrome-manage-account.jpg) | ![screenshot](documentation/chrome-basket.jpg) | Works as expected |
 | Brave | ![screenshot](documentation/brave-home.jpg) | ![screenshot](documentation/brave-products.jpg) | ![screenshot](documentation/brave-contact.jpg) | ![screenshot](documentation/brave-profile.jpg) | ![screenshot](documentation/brave-manage-account.jpg) | ![screenshot](documentation/brave-basket.jpg) | Works as expected |
 | Firefox | ![screenshot](documentation/firefox-home.jpg) | ![screenshot](documentation/firefox-products.jpg) | ![screenshot](documentation/firefox-contact.jpg) | ![screenshot](documentation/firefox-profile.jpg) | ![screenshot](documentation/firefox-manage-account.jpg) | ![screenshot](documentation/firefox-basket.jpg) | Works as expected |
@@ -115,17 +115,22 @@ I've tested my deployed project on multiple browsers to check for compatibility 
 
 I've tested my deployed project on multiple devices to check for responsiveness issues.
 
-| Device | Home | About | Contact | etc | Notes |
-| --- | --- | --- | --- | --- | --- |
-| Mobile (DevTools) | ![screenshot](documentation/mobile-devtools-home.jpg) | ![screenshot](documentation/mobile-devtools-products.jpg) | ![screenshot](documentation/mobile-devtools-contact.jpg) | ![screenshot](documentation/mobile-devtools-profile.jpg) | ![screenshot](documentation/mobile-devtools-manage-account.jpg) | ![screenshot](documentation/mobile-devtools-basket.jpg) | ![screenshot](documentation/mobile-devtools-productdescription.jpg) | ![screenshot](documentation/mobile-devtools-checkout-success.jpg) | ![screenshot](documentation/mobile-devtools-edit.jpg) | ![screenshot](documentation/mobile-devtools-register.jpg) | ![screenshot](documentation/mobile-devtools-sign-in.jpg) | Works as expected |
+| Device | Home | Products | Contact | Profile | Manage Account | Notes |
+| --- | --- | --- | --- | --- | --- | --- |
+| Mobile (DevTools) | ![screenshot](documentation/mobile-devtools-home.jpg) | ![screenshot](documentation/mobile-devtools-products.jpg) | ![screenshot](documentation/mobile-devtools-contact.jpg) | ![screenshot](documentation/mobile-devtools-profile.jpg) | ![screenshot](documentation/mobile-devtools-manage-account.jpg) | Works as expected |
+| Tablet (DevTools) | ![screenshot](documentation/tablet-devtools-home.jpg) | ![screenshot](documentation/tablet-devtools-product.jpg) | ![screenshot](documentation/tablet-devtools-contact.jpg) | ![screenshot](documentation/tablet-devtools-profile.jpg) | ![screenshot](documentation/tablet-devtools-manage-account.jpg) | Works as expected |
+| Desktop | ![screenshot](documentation/chrome-home.jpg) | ![screenshot](documentation/chrome-products.jpg) | ![screenshot](documentation/chrome-contact.jpg) | ![screenshot](documentation/chrome-profile.jpg) | ![screenshot](documentation/chrome-manage-account.jpg) | Works as expected |
+
+| Devices | Basket | Prod description | Checkout | Edit | Register | Sign in | Notes |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Mobile (DevTools) | ![screenshot](documentation/mobile-devtools-basket.jpg) | ![screenshot](documentation/mobile-devtools-productdescription.jpg) | ![screenshot](documentation/mobile-devtools-checkout-success.jpg) | ![screenshot](documentation/mobile-devtools-edit.jpg) | ![screenshot](documentation/mobile-devtools-register.jpg) | ![screenshot](documentation/mobile-devtools-sign-in.jpg) | Works as expected |
+| Tablet (DevTools) | ![screenshot](documentation/tablet-devtools-basket.jpg) | ![screenshot](documentation/tablet-devtools-product-description.jpg) | ![screenshot](documentation/tablet-devtools-checkout-success.jpg) | ![screenshot](documentation/tablet-devtools-edit.jpg) | ![screenshot](documentation/tablet-devtools-register.jpg) | ![screenshot](documentation/tablet-devtools-sign-in.jpg) | Works as expected |
+| Desktop | ![screenshot](documentation/chrome-basket.jpg) | ![screenshot](documentation/prod-description.jpg) | ![screenshot](documentation/chrome-checkout-success.jpg) | ![screenshot](documentation/chrome-edit.jpg) | ![screenshot](documentation/chrome-register.jpg) | ![screenshot](documentation/chrome-sign-in.jpg) | Works as expected |
 
 
-| Tablet (DevTools) | ![screenshot](documentation/responsive-tablet-home.png) | ![screenshot](documentation/responsive-tablet-about.png) | ![screenshot](documentation/responsive-tablet-contact.png) | ![screenshot](documentation/responsive-tablet-etc.png) | Works as expected |
-| Desktop | ![screenshot](documentation/responsive-desktop-home.png) | ![screenshot](documentation/responsive-desktop-about.png) | ![screenshot](documentation/responsive-desktop-contact.png) | ![screenshot](documentation/responsive-desktop-etc.png) | Works as expected |
-| XL Monitor | ![screenshot](documentation/responsive-xl-home.png) | ![screenshot](documentation/responsive-xl-about.png) | ![screenshot](documentation/responsive-xl-contact.png) | ![screenshot](documentation/responsive-xl-etc.png) | Scaling starts to have minor issues |
-| 4K Monitor | ![screenshot](documentation/responsive-4k-home.png) | ![screenshot](documentation/responsive-4k-about.png) | ![screenshot](documentation/responsive-4k-contact.png) | ![screenshot](documentation/responsive-4k-etc.png) | Noticeable scaling issues |
-| Google Pixel 7 Pro | ![screenshot](documentation/responsive-pixel-home.png) | ![screenshot](documentation/responsive-pixel-about.png) | ![screenshot](documentation/responsive-pixel-contact.png) | ![screenshot](documentation/responsive-pixel-etc.png) | Works as expected |
-| iPhone 14 | ![screenshot](documentation/responsive-iphone-home.png) | ![screenshot](documentation/responsive-iphone-about.png) | ![screenshot](documentation/responsive-iphone-contact.png) | ![screenshot](documentation/responsive-iphone-etc.png) | Works as expected |
+| Google Pixel 7 | ![screenshot](documentation/responsive-pixel-home.png) | ![screenshot](documentation/responsive-pixel-about.png) | ![screenshot](documentation/responsive-pixel-contact.png) | ![screenshot](documentation/responsive-pixel-etc.png) | Works as expected |
+
+| Huawei p20 pro | ![screenshot](documentation/responsive-iphone-home.png) | ![screenshot](documentation/responsive-iphone-about.png) | ![screenshot](documentation/responsive-iphone-contact.png) | ![screenshot](documentation/responsive-iphone-etc.png) | Works as expected |
 
 ## Lighthouse Audit
 
