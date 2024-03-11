@@ -358,4 +358,7 @@ If user is not logged in it should prompt user to sign in or register if they wo
 
 ## Unfixed Bugs
 
-<!-- unfixed bugs -->
+- Duplicate attribute id
+
+    ![screenshot](documentation/html_add_products.jpg)
+    ![screenshot](documentation/widget.jpg)
