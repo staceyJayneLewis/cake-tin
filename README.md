@@ -225,7 +225,6 @@ Newsletter
 - **Basket #14**
 
     - Customer can sometimes user the basket like a wishlist and add lots of things before going through the list to remove those they don’t want so the basket is a useful tool for customers to summarise the review their order before checkout and payment. They might want to check their options on each item such as price, quantity, product type,and subtotal of each item added and so each details has been organised into a table feature so they can easily understand the data. For example, there is a table header featuring each item detail and then the price, quanitity, images etc are place in the applicable column so the information is displayed and sectioned clearly. 
-
     There is an input box on the basket page so if there is something the user may have missed or forgotten about on the product page the can remove or add using the quantity input box. There is then a simple 'Update' button labelled in blue to click to update the quantity and a red 'remove' button to easily completely remove the item. To make the basket user-friendly I have also added the option of reducing the order to zero in order to delete the item from their basket.
     To make the page obvious it is the basket page I have clearly labelled the page with 'Your basket' header so the user knows exactly what part of the purchase process they are on and again included a highlighted green button as used on every other checkout button through the site so the customers knows the green buttons relate to the basket/checkout. 
 
@@ -352,7 +351,7 @@ Newsletter
     - link google reviews or trust pilot review to website.
 - Link social media to the website #4
 	- Allow users to see recent social media posts on the website
-- verfication email set up
+- Verfication email set up
 	- set a functionality up where users have to verify their email when signing up.
 
 ## Tools & Technologies Used
