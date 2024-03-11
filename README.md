@@ -7,7 +7,7 @@ be able to travel to the store to purchase.
 
 The second aim of the website is to use the website as a way to advertise the USP of the cupcakes which are that all ingredients are from local suppliers to support the community businesses such as the milk and eggs from the local farmers etc. 
 
-https://ui.dev/amiresponsive?url=https://8000-staceyjaynelewi-caketin-olzf3g07xns.ws-eu108.gitpod.io/
+https://ui.dev/amiresponsive?url=https://cake-tin-c51245f8ed0d.herokuapp.com
 
 ![screenshot](documentation/mockup.jpg)
 
