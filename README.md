@@ -7,8 +7,6 @@ be able to travel to the store to purchase.
 
 The second aim of the website is to use the website as a way to advertise the USP of the cupcakes which are that all ingredients are from local suppliers to support the community businesses such as the milk and eggs from the local farmers etc. 
 
-https://ui.dev/amiresponsive?url=https://cake-tin-c51245f8ed0d.herokuapp.com
-
 ![screenshot](documentation/mockup.jpg)
 
 Below you can see the charts and user stories I created to visualise the flow of the website and any error messages or actions needed depending on the user interaction. You can see on the charts I have worked out what data needs to be collected or added to the database depending on user interaction and what error messages need to be put in place incase of an unexpected/incorrect response.
@@ -662,7 +660,8 @@ Deployment steps are as follows, after account setup:
 | `STRIPE_PUBLIC_KEY` | user's own value |
 | `STRIPE_SECRET_KEY` | user's own value |
 | `STRIPE_WH_SECRET` | user's own value |
-| `USE_AWS` | True |
+| `HOST` | user's own value |
+| `USE_AWS` | True |#
 
 Heroku needs two additional files in order to deploy properly.
 
@@ -722,6 +721,7 @@ os.environ.setdefault("SECRET_KEY", "user's own value")
 os.environ.setdefault("STRIPE_PUBLIC_KEY", "user's own value")
 os.environ.setdefault("STRIPE_SECRET_KEY", "user's own value")
 os.environ.setdefault("STRIPE_WH_SECRET", "user's own value")
+os.environ.setdefault("HOST", "user's own value")
 
 # local environment only (do not include these in production/deployment!)
 os.environ.setdefault("DEBUG", "True")
@@ -783,24 +783,24 @@ There are currently no differences between the local version and the live deploy
 | --- | --- | --- |
 | [Markdown Builder](https://tim.2bn.dev/markdown-builder) | README and TESTING | tool to help generate the Markdown files |
 | [Chris Beams](https://chris.beams.io/posts/git-commit) | version control | "How to Write a Git Commit Message" |
-| [Programiz](https://www.programiz.com/python-programming/args-and-kwargs)| Refresher on how to use args and kwargs |
-| [Django Documentation](https://docs.djangoproject.com/en/5.0/topics/db/aggregation/) | Help to understand how aggregation works to use on the checkout model |
-| [Stripe Docs](https://docs.stripe.com/) | Help to understand how to set up the start of the stripe payments process |
-| [NKMK](https://note.nkmk.me/en/python-tuple-single-empty/) | Helped me find the answer of using a single element in a tuple |
-| [stackoverflow](https://stackoverflow.com/questions/16307307/django-admin-show-image-from-imagefield/16307554#16307554) | Showed me how to display the product image on the admin |
-| [stackoverflow](https://stackoverflow.com/questions/46021463/heroku-giving-500-error-with-little-information-internal-server-error) | helped to figure out how to use heroku logs -t to check the internal server error |
-| [stackoverflow](https://stackoverflow.com/questions/65581489/uncaught-in-promise-integrationerror-invalid-value-for-stripe-confirmcardpaym) | helped understand what the stripe intent error could be |
-| [stackoverflow](https://stackoverflow.com/questions/16105485/unsupported-operand-types-for-float-and-decimal) | helped me figure out how to solve the opperand error I was receiving |
-| [stackoverflow](https://stackoverflow.com/questions/32123477/how-to-revert-the-last-migration) | how to revert to the last migration due to error |
-| [reddit](https://www.reddit.com/r/djangolearning/comments/rwnpyv/tutorial_help_getting_reverse_for_profile_with/) | Helped me to figure out the reverse for 'add_to_basket' with no arguments not found error |
-| [stackoverflow](https://stackoverflow.com/questions/65239302/python-django-non-nullable-field) | Help to figure out the error: You are trying to add a non-nullable field 'allergen' to product without a default; we can't do that' |
-| [geeksforgeeks](https://www.geeksforgeeks.org/textfield-django-models/) | how to add default fields to the django models |
-| [mozilla](https://developer.mozilla.org/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data) | Help me understand the sending and retreiving data from forms using django |
-| [stackoverflow](https://stackoverflow.com/questions/14149088/how-to-pass-value-from-optionselect-to-form-action) | how to pass values from select options to form action |
-| [stackoverflow](https://stackoverflow.com/questions/38836795/typeerror-int-argument-must-be-a-string-a-bytes-like-object-or-a-number-not) | assisted me in finding out the type error fix |
-| [nkmk](https://note.nkmk.me/en/python-tuple-single-empty/) | Error: The value of 'inlines' must be a list or tuple error - helped me realise that as it is a tuple I need to include a comma even though there only 1 element in it. |
-| [stackoverflow](https://stackoverflow.com/questions/46021463/heroku-giving-500-error-with-little-information-internal-server-error) | Helped me understand how to find the error message when error 500 is displayed |
-| [https://stackoverflow.com/questions/65581489/uncaught-in-promise-integrationerror-invalid-value-for-stripe-confirmcardpaym](stackoverflow) | Helped me understand my mistake of putting quotation marks on the value of the intent key and the public key which was causing me an error |
+| [Programiz](https://www.programiz.com/python-programming/args-and-kwargs) | ERD | Refresher on how to use args and kwargs |
+| [Django Documentation](https://docs.djangoproject.com/en/5.0/topics/db/aggregation/) | Checkout | Help to understand how aggregation works to use on the checkout model |
+| [Stripe Docs](https://docs.stripe.com/) | Checkout | Help to understand how to set up the start of the stripe payments process |
+| [NKMK](https://note.nkmk.me/en/python-tuple-single-empty/) | Python | Helped me find the answer of using a single element in a tuple |
+| [stackoverflow](https://stackoverflow.com/questions/16307307/django-admin-show-image-from-imagefield/16307554#16307554) | Admin Dashboard | Showed me how to display the product image on the admin |
+| [stackoverflow](https://stackoverflow.com/questions/46021463/heroku-giving-500-error-with-little-information-internal-server-error) | Heroku | helped to figure out how to use `heroku logs -t` to check the internal server error |
+| [stackoverflow](https://stackoverflow.com/questions/65581489/uncaught-in-promise-integrationerror-invalid-value-for-stripe-confirmcardpaym) | Stripe | helped understand what the `stripe intent` error could be |
+| [stackoverflow](https://stackoverflow.com/questions/16105485/unsupported-operand-types-for-float-and-decimal) | Stripe | helped me figure out how to solve the `opperand` error I was receiving |
+| [stackoverflow](https://stackoverflow.com/questions/32123477/how-to-revert-the-last-migration) | Migrations | how to revert to the last migration due to error |
+| [reddit](https://www.reddit.com/r/djangolearning/comments/rwnpyv/tutorial_help_getting_reverse_for_profile_with/) | Basket | Helped me to figure out the reverse for `add_to_basket` with no arguments not found error |
+| [stackoverflow](https://stackoverflow.com/questions/65239302/python-django-non-nullable-field) | Postgres | Help to figure out the error: `You are trying to add a non-nullable field 'allergen' to product without a default; we can't do that'` |
+| [geeksforgeeks](https://www.geeksforgeeks.org/textfield-django-models/) | Models | how to add default fields to the django models |
+| [mozilla](https://developer.mozilla.org/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data) | Forms | Help me understand the sending and retrieving data from forms using django |
+| [stackoverflow](https://stackoverflow.com/questions/14149088/how-to-pass-value-from-optionselect-to-form-action) | Forms | how to pass values from select options to form action |
+| [stackoverflow](https://stackoverflow.com/questions/38836795/typeerror-int-argument-must-be-a-string-a-bytes-like-object-or-a-number-not) | Postgres | assisted me in finding out the type error fix |
+| [nkmk](https://note.nkmk.me/en/python-tuple-single-empty/) | Postgres | `Error: The value of 'inlines' must be a list or tuple` error - helped me realise that as it is a tuple I need to include a comma even though there only 1 element in it. |
+| [stackoverflow](https://stackoverflow.com/questions/46021463/heroku-giving-500-error-with-little-information-internal-server-error) | Error Pages | Helped me understand how to find the error message when error 500 is displayed |
+| (stackoverflow)[https://stackoverflow.com/questions/65581489/uncaught-in-promise-integrationerror-invalid-value-for-stripe-confirmcardpaym] | Stripe | Helped me understand my mistake of putting quotation marks on the value of the intent key and the public key which was causing me an error |
 
 
 ### Media
