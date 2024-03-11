@@ -198,6 +198,8 @@ Defensive programming was manually tested with the below user acceptance testing
 
 ### New Site Users
 
+| User Story | Screenshot |
+| --- | --- |
 | As a new site user, I would like to register for an account, so that I can have my own account. | ![screenshot](documentation/register.jpg) |
 | As a new site user, I would like to create a secure password, so that I can be assured my account is secure. | ![screenshot](documentation/register-password.jpg) |
 | As a new site user, I would like to view the selection of cakes, so that I can see what the product looks like. | ![screenshot](documentation/feature7.jpg) |
@@ -208,18 +210,12 @@ Defensive programming was manually tested with the below user acceptance testing
 | As a new site user, I would like to easily be able to view items in my bag that I can check what I am purchasing again before payment. | ![screenshot](documentation/chrome-basket.jpg) |
 | As a new site user, I would like to receive and view and order confirmation message so that I can verify my order is complete. | ![screenshot](documentation/feature19.jpg) |
 | As a new or existing site user I would like to be able to enter payment details so I can simply purchase the good I would like. | ![screenshot](documentation/feature17.jpg) |
-
-### Returning Site Users
-
 | As a returning site user, I would like to simply log in and log out, so that I can easily access my profile page. | ![screenshot](documentation/feature30.jpg) |
 | As a returning site user, I would like to have my own profile, so that I can save payment information and view order history.| ![screenshot](documentation/chrome-profile.jpg) |
 | As a returning site user, I would like to recover my password if I have forgotten it, so that I can gain access back to my account. | ![screenshot](documentation/forgot-password.jpg) |
 | As a returning site user, have visual sight of my shopping basket , so that I can keep track of the total amount I am spending to make sure it is affordable for me.| ![screenshot](documentation/feature1.jpg) |
 | As a returning site user, I would like to see a list of categories of cake types, so that I can easily navigate to the product I want such a new collection or offers and sales.| ![screenshot](documentation/feature5.jpg) |
 | As a returning site user, I would like to view recent purchases, so that I don't have to go searching for a product I purchased previously or have to retype the product each time.| ![screenshot](documentation/feature22.jpg) |
-
-### Site Admin
-
 | As a site administrator, I should be able to add new products, so that I can add new items to my store.| ![screenshot](documentation/feature24.jpg) |
 | As a site administrator, I should be able to edit products, so that I can edit any items that need amending such a price etc.| ![screenshot](documentation/feature24.jpg) |
 | As a site administrator, I should be able to delete products, so that I can remove any products no longer on sale.| ![screenshot](documentation/feature23.jpg) |
@@ -354,4 +350,3 @@ Defensive programming was manually tested with the below user acceptance testing
 - Duplicate attribute id
 
     ![screenshot](documentation/html_add_products.jpg)
-    ![screenshot](documentation/widget.jpg)
