@@ -335,6 +335,12 @@ Newsletter
 
     ![screenshot](documentation/feature31.jpg)
 
+- **Confirmation Email #32**
+    - When customers make a purchase they also recieve a confirmation email to their email address provided on checkout and this provides reassurance to the customer that the purchase has gone through and is their copy of a receipt/proof of purchase.
+
+    ![screenshot](documentation/test-email.jpg)
+    ![screenshot](documentation/test-email-2.jpg)
+
 
 ### Future Features
 
