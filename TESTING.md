@@ -113,7 +113,7 @@ I've tested my deployed project on multiple browsers to check for compatibility 
 
 ## Responsiveness
 
-I've tested my deployed project on multiple devices to check for responsiveness issues.
+I've tested my deployed project on multiple devices to check for responsiveness issues. As there are so many pages to test responsivness on I have split the table into two 2 tables.
 
 | Device | Home | Products | Contact | Profile | Manage Account | Notes |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -134,31 +134,23 @@ I've tested my deployed project on multiple devices to check for responsiveness 
 
 ## Lighthouse Audit
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-Use this space to discuss testing the live/deployed site's Lighthouse Audit reports.
-Avoid testing the local version (especially if developing in Gitpod), as this can have knock-on effects of performance.
-
-If you don't have Lighthouse in your Developer Tools,
-it can be added as an [extension](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk).
-
-Don't just test the home page (unless it's a single-page application).
-Make sure to test the Lighthouse Audit results for all of your pages.
-
-**IMPORTANT**: You must provide screenshots of the results, to "prove" that you've actually tested them.
-
-Sample Lighthouse testing documentation:
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
 I've tested my deployed project using the Lighthouse Audit tool to check for any major issues.
 
 | Page | Mobile | Desktop | Notes |
 | --- | --- | --- | --- |
-| Home | ![screenshot](documentation/lighthouse-home-mobile.png) | ![screenshot](documentation/lighthouse-home-desktop.png) | Some minor warnings |
-| About | ![screenshot](documentation/lighthouse-about-mobile.png) | ![screenshot](documentation/lighthouse-about-desktop.png) | Some minor warnings |
-| Gallery | ![screenshot](documentation/lighthouse-gallery-mobile.png) | ![screenshot](documentation/lighthouse-gallery-desktop.png) | Slow response time due to large images |
-| x | x | x | repeat for any other tested pages/sizes |
+| Home | ![screenshot](documentation/lighthouse-home-mobile.jpg) | ![screenshot](documentation/lighthouse-home-desktop.jpg) | Some warnings particularly on mobile devices due to large images and third parties used e.g bootstrap, stripe etc |
+| Products | ![screenshot](documentation/lighthouse-products-mobile.jpg) | ![screenshot](documentation/lighthouse-products-desktop.jpg) | Some warnings particularly on mobile devices due amount of images and third parties used e.g bootstrap, stripe etc |
+| Contact | ![screenshot](documentation/lighthouse-contact-mobile.jpg) | ![screenshot](documentation/lighthouse-contact-desktop.jpg) | Some warnings particularly on mobile devices due to third parties used e.g bootstrap, stripe etc |
+| Profile | ![screenshot](documentation/lighthouse-profile-mobile.jpg) | ![screenshot](documentation/lighthouse-profile-desktop.jpg) | Some warnings particularly on mobile devices third parties used e.g bootstrap, stripe etc |
+| Add Product | ![screenshot](documentation/lighthouse-add-product-mobile.jpg) | ![screenshot](documentation/lighthouse-add-product-desktop.jpg) | Some warnings particularly on mobile devices due to third parties used e.g bootstrap, stripe etc |
+| Basket | ![screenshot](documentation/lighthouse-basket-mobile.jpg) | ![screenshot](documentation/lighthouse-basket-desktop.jpg) | Some warnings particularly on mobile devices due to third parties used e.g bootstrap, stripe etc|
+| Product Description | ![screenshot](documentation/lighthouse-prod-desc-mobile.jpg) | ![screenshot](documentation/lighthouse-prod-desc-desktop.jpg) | Some warnings particularly on mobile devices due to third parties used e.g bootstrap, stripe etc |
+| Checkout Success | ![screenshot](documentation/lighthouse-checkout-mobile.jpg) | ![screenshot](documentation/lighthouse-checkout-desktop.jpg) | Some warnings particularly on mobile devices due to third parties used e.g bootstrap, stripe etc |
+| Edit Product | ![screenshot](documentation/lighthouse-prod-edit-mobile.jpg) | ![screenshot](documentation/lighthouse-prod-edit-desktop.jpg) | Some warnings particularly on mobile devices due to third parties used e.g bootstrap, stripe etc |
+| Register | ![screenshot](documentation/lighthouse-register-mobile.jpg) | ![screenshot](documentation/lighthouse-register-desktop.jpg) | Some warnings particularly on mobile devices due to third parties used e.g bootstrap, stripe etc |
+| Sign in | ![screenshot](documentation/lighthouse-login-mobile.jpg) | ![screenshot](documentation/lighthouse-login-desktop.jpg) | Some warnings particularly on mobile devices due to third parties used e.g bootstrap, stripe etc |
+| Payment Page | ![screenshot](documentation/lighthouse-payment-mobile.jpg) | ![screenshot](documentation/lighthouse-payment-desktop.jpg) | Some warnings particularly on mobile devices due to third parties used e.g bootstrap, stripe etc |
+
 
 ## Defensive Programming
 
@@ -169,47 +161,16 @@ Defensive programming (defensive design) is extremely important!
 When building projects that accept user inputs or forms, you should always test the level of security for each.
 Examples of this could include (not limited to):
 
-Forms:
 - Users cannot submit an empty form
 - Users must enter valid email addresses
-
-PP3 (Python-only):
 - Users must enter a valid letter/word/string when prompted
 - Users must choose from a specific list only
-
-MS3 (Flask) | MS4/PP4/PP5 (Django):
 - Users cannot brute-force a URL to navigate to a restricted page
 - Users cannot perform CRUD functionality while logged-out
 - User-A should not be able to manipulate data belonging to User-B, or vice versa
 - Non-Authenticated users should not be able to access pages that require authentication
 - Standard users should not be able to access pages intended for superusers
 
-You'll want to test all functionality on your application, whether it's a standard form,
-or uses CRUD functionality for data manipulation on a database.
-Make sure to include the `required` attribute on any form-fields that should be mandatory.
-Try to access various pages on your site as different user types (User-A, User-B, guest user, admin, superuser).
-
-You should include any manual tests performed, and the expected results/outcome.
-
-Testing should be replicable.
-Ideally, tests cases should focus on each individual section of every page on the website.
-Each test case should be specific, objective, and step-wise replicable.
-
-Instead of adding a general overview saying that everything works fine,
-consider documenting tests on each element of the page
-(ie. button clicks, input box validation, navigation links, etc.) by testing them in their happy flow,
-and also the bad/exception flow, mentioning the expected and observed results,
-and drawing a parallel between them where applicable.
-
-Consider using the following format for manual test cases:
-
-Expected Outcome / Test Performed / Result Received / Fixes Implemented
-
-- **Expected**: "Feature is expected to do X when the user does Y."
-- **Testing**: "Tested the feature by doing Y."
-- (either) **Result**: "The feature behaved as expected, and it did Y."
-- (or) **Result**: "The feature did not respond to A, B, or C."
-- **Fix**: "I did Z to the code because something was missing."
 
 Use the table below as a basic start, and expand on it using the logic above.
 
@@ -220,69 +181,47 @@ Defensive programming was manually tested with the below user acceptance testing
 | Page | Expectation | Test | Result | Fix | Screenshot |
 | --- | --- | --- | --- | --- | --- |
 | Home | | | | | |
-| | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature behaved as expected, and it did Y | Test concluded and passed | ![screenshot](documentation/feature01.png) |
-| | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature did not respond to A, B, or C. | I did Z to the code because something was missing | ![screenshot](documentation/feature02.png) |
-| About | | | | | |
-| | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature behaved as expected, and it did Y | Test concluded and passed | ![screenshot](documentation/feature03.png) |
-| | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature did not respond to A, B, or C. | I did Z to the code because something was missing | ![screenshot](documentation/feature04.png) |
-| Gallery | | | | | |
-| | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature behaved as expected, and it did Y | Test concluded and passed | ![screenshot](documentation/feature05.png) |
-| | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature did not respond to A, B, or C. | I did Z to the code because something was missing | ![screenshot](documentation/feature06.png) |
-| Contact | | | | | |
-| | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature behaved as expected, and it did Y | Test concluded and passed | ![screenshot](documentation/feature07.png) |
-| | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature did not respond to A, B, or C. | I did Z to the code because something was missing | ![screenshot](documentation/feature08.png) |
-| repeat for all remaining pages | x | x | x | x | x |
+| | Brand logo and home button on navbar is expected take user back to the home page when clicked | Tested the feature by going to a different page and clicking the logo to see if it directs me back to the home page | The feature behaved as expected | Test concluded and passed | ![screenshot](documentation/feature2.jpg) |
+| Shop now button expected to take the user to the Winter Collection page when clicked | Tested the feature by clicking on the button and checking it directs me to the correct page | Test concluded and passed | ![screenshot](documentation/feature4.jpg) |
+| Carousel indicators on home page carousel should change photos to a different photo when clicked | Tested the feature by clicking on other indicators to see if the image changes on the carousel | Test concluded and passed | ![screenshot](documentation/feature3.jpg) |
+| Subscribe button should direct me to the newsletter page when clicked | Tested the feature by clicking on the 'Subscribe now' button | Test concluded and passed | ![screenshot](documentation/feature11.jpg) |
+| 'Our products' button opens a dropdown of category options | Tested the feature by clicking on the 'Our Product' button | Test concluded and passed | ![screenshot](documentation/feature5.jpg) |
+| All category option buttons on the dropdown of category options direct to their related page e.g Winter collection directs to winter collections page etc | Tested the features by clicking on all of the options of the buttons and checking they directed to the relevant page. | Test concluded and passed | ![screenshot](documentation/feature5.jpg) |
+| Expect contact button on the navbar to direct me to the contact page when clicked | Tested the feature by clicking on the 'contact' button and checking it directs to the contact page | Test concluded and passed | ![screenshot](documentation/feature1.jpg) |
+| Search input and search button returns the related product when entered a search name in the input and search buttons clicked | Tested the feature by typing in the word 'Mint' to see if it returns the mint chocolate cake in the search results on the page and in the url | Test concluded and passed | ![screenshot](documentation/feature1.jpg) |
+| When 'My Account' dropdown button is clicked it reveals a dropdown displaying the options of 'My profile', 'log out' and 'Manage store' if user is logged in  | 'My account' button is clicked to see if it reveals the dropdown as expected | Test concluded and passed | ![screenshot](documentation/feature1.jpg) |
+| When 'My Profile' button is clicked I should get directed to the profile page of the user if signed in | I clicked the 'My Profile' button which directed me to my profile page as expected. | Test concluded and passed | ![screenshot](documentation/chrome-profile.jpg) |
+| When a user is not signed in to an account they should not be able to see the 'My Profile' option or be able to use the URL to access the profile page, instead they should be provided the sign in page | I signed out of my user account to see if I could see the my profile option and tried manually typing the profile in the URL(https://cake-tin-c51245f8ed0d.herokuapp.com/profile/) | ![screenshot](documentation/chrome-profile.jpg) | Test concluded and passed | ![alt text](image-1.png) |
+| Footer social media link should open up the related social media page e.g facebook icon opens facebook page in new tab  | Tested the icons by clicking on each of the 4 icons and seeing if they open up the correct link to their social media page | Test concluded and passed | ![screenshot](documentation/feature6.jpg) |
+| If nothing is entered in the search input form in the navbar when search button is clicked it will return an error toaster telling users they did not enter a product and direct them to the 'All Cupcakes' page | Tested this by clicking the search button without entering anything in the input box | Test concluded and passed | ![screenshot](documentation/search-input.jpg) |
+| Basket button on the navbar is expected to go to the basket page and display products in the basket if there is any in the session or display a message which states 'basket it empty' | Tested the feature by clicking on the basket button in the navbar | The feature behaved as expected | ![screenshot](documentation/feature1.jpg) |
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+| Profile | | | | | |
+| | An error 404 should display if a non existing profile is entered into the URL or for any unrecognised page links | I attempted to get to a profile using an unregistered username or link | Test concluded and passed | ![screenshot](documentation/testing-profile-defence.jpg) |
 
-Another way of performing defensive testing is a simple Pass/Fail for each test.
-The assessors prefer the above method, with the full test explained, but this is also acceptable in most cases.
+| Our Products | | | | | |
+| When signed in to a different account that is not a superuser they should not be able to see the edit/delete buttons on the product images | Tested the feature by creating a new non-superuser account and going to the 'All Cupcakes' page | The feature behaved as expected, and did not show the edit/delete buttons | Test concluded and passed | ![screenshot](documentation/non-superuser.jpg) |
+| Any superuser should not be able to add/edit or delete products when not signed in | Tested the feature by trying the following links in the url (https://cake-tin-c51245f8ed0d.herokuapp.com/products/add)(https://cake-tin-c51245f8ed0d.herokuapp.com/products/edit/2)(https://cake-tin-c51245f8ed0d.herokuapp.com/products/delete/2)| The feature behaved as expected and displayed the sign in page and did not display any of the CRUD pages. | Test concluded and passed | ![screenshot](documentation/testing-crud.jpg) |
 
-When in doubt, use the above method instead, and delete the table below.
+| Contact Page | | | | | |
+| User should not be able to submit the contact form if the required fields are blank | Tested the feature by clicking on the submit button on the contact form on the contage page without enterring any information | The feature behaved as expected, as it displayed an alert saying 'Please fill in this field' and form did not submit. | ![screenshot](documentation/contact-submit.jpg) |
+| If all required fields are filled in then the form should submit and display a confirmation message. | Tested the feature by correctly filling in the form and submitting the contact form | The feature behaved as expected, as it displayed an alert saying 'Thank you for your message we will get back to you soon!'. | ![screenshot](documentation/contact-form-message.jpg) |
 
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+| Checkout Page | | | | | |
+| Users should not be able to submit payment form if any required fields are blank | Tested this by clicking the 'Complete Order' button leaving the required fields blank | The feature behaved as expected, as it displayed an alert saying 'Please fill in this field' and form did not submit. | ![screenshot](documentation/checkout-form-defensive.jpg) |
+| The country field of the checkout option should be a dropdown so the users can easily select from options and all conform to the same format | Tested this by going to the checkout page on both super user and non-super user and non-registered users to see if the dropdown is applied and gives the option of countries to all types of customers | The feature behaved as expected and had the same dropdown and options for all types of users | ![screenshot](documentation/feature16.jpg) |
+If user is not logged in it should prompt user to sign in or register if they would like to save their details or if they are signed in they should have an option of a checkbox automatically ticked | Tested this by making sure i'm signed out and trying to checkout and also signing in and attempting to checkout | The feature behaved as expected and prompted me to log in or register when not signed in or when signed in added my details to my default details on my profile | ![screenshot](documentation/testing-checkout.jpg) |
+| Users should not be able to submit card payment if card details are invalid | Tested this by putting in a historic expiry date on the payment details on the checkout page | The feature behaved as expected by advising an error which states the specific problem | ![screenshot](documentation/testing-expiry-payment.jpg) |
 
-| Page | User Action | Expected Result | Pass/Fail | Comments |
-| --- | --- | --- | --- | --- |
-| Home | | | | |
-| | Click on Logo | Redirection to Home page | Pass | |
-| | Click on Home link in navbar | Redirection to Home page | Pass | |
-| Gallery | | | | |
-| | Click on Gallery link in navbar | Redirection to Gallery page | Pass | |
-| | Load gallery images | All images load as expected | Pass | |
-| Contact | | | | |
-| | Click on Contact link in navbar | Redirection to Contact page | Pass | |
-| | Enter first/last name | Field will accept freeform text | Pass | |
-| | Enter valid email address | Field will only accept email address format | Pass | |
-| | Enter message in textarea | Field will accept freeform text | Pass | |
-| | Click the Submit button | Redirects user to form-dump | Pass | User must click 'Back' button to return |
-| Sign Up | | | | |
-| | Click on Sign Up button | Redirection to Sign Up page | Pass | |
-| | Enter valid email address | Field will only accept email address format | Pass | |
-| | Enter valid password (twice) | Field will only accept password format | Pass | |
-| | Click on Sign Up button | Asks user to confirm email page | Pass | Email sent to user |
-| | Confirm email | Redirects user to blank Sign In page | Pass | |
-| Log In | | | | |
-| | Click on the Login link | Redirection to Login page | Pass | |
-| | Enter valid email address | Field will only accept email address format | Pass | |
-| | Enter valid password | Field will only accept password format | Pass | |
-| | Click Login button | Redirects user to home page | Pass | |
-| Log Out | | | | |
-| | Click Logout button | Redirects user to logout page | Pass | Confirms logout first |
-| | Click Confirm Logout button | Redirects user to home page | Pass | |
-| Profile | | | | |
-| | Click on Profile button | User will be redirected to the Profile page | Pass | |
-| | Click on the Edit button | User will be redirected to the edit profile page | Pass | |
-| | Click on the My Orders link | User will be redirected to the My Orders page | Pass | |
-| | Brute forcing the URL to get to another user's profile | User should be given an error | Pass | Redirects user back to own profile |
-| repeat for all remaining pages | x | x | x | x |
+| Sign in | | | | | |
+| | User should not be permitted to submit empty form | Tested the feature by clicking the sign in button to see if submits the form with empty inputs | The feature behaved as expected, 'Sign in' button clicked and prompt came up telling user to fill in event name field | Test concluded and passed | ![screenshot](documentation/signin-testing.jpg) |
+| | User should not be able to log in with incorrect password | Tested the feature by attempting to log in with an incorrect password | The feature behaved as expected, I recieved an error message which states 'username/password' incorrect | Test concluded and passed | ![screenshot](documentation/testing-password.jpg) |
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+| Register | | | | | |
+| | User should not be permitted to submit empty form | Tested the feature by clicking the register button to see if submits the form with empty inputs | The feature behaved as expected, 'register' button clicked and prompt came up telling user to fill in event name fields | Test concluded and passed | ![screenshot](documentation/register-testing.jpg) |
+| | Password must contain atleast 8 characters | Tested the feature by inputting a password shorter than 8 character | The feature behaved as expected, prompt shown that password was too short | Test concluded and passed | ![screenshot](documentation/testing-short-password.jpg) |
+| | Password must match confirm password | Tested the feature by typing in a different password in the confirm password compared to the password field | Feature behaved as expected, flash message of 'passwords must match' shows on screen if confirm password and password are different | Test concluded and passed | ![screenshot](documentation/testing-password-match.jpg) |
 
-Repeat for all other tests, as applicable to your own site.
-The aforementioned tests are just an example of a few different project scenarios.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
 
 ## User Story Testing
 
@@ -441,43 +380,4 @@ The aforementioned tests are just an example of a few different project scenario
 
 ## Unfixed Bugs
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-You will need to mention unfixed bugs and why they were not fixed.
-This section should include shortcomings of the frameworks or technologies used.
-Although time can be a big variable to consider, paucity of time and difficulty understanding
-implementation is not a valid reason to leave bugs unfixed.
-
-If you've identified any unfixed bugs, no matter how small, be sure to list them here.
-It's better to be honest and list them, because if it's not documented and an assessor finds the issue,
-they need to know whether or not you're aware of them as well, and why you've not corrected/fixed them.
-
-Some examples:
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-- On devices smaller than 375px, the page starts to have `overflow-x` scrolling.
-
-    ![screenshot](documentation/unfixed-bug01.png)
-
-    - Attempted fix: I tried to add additional media queries to handle this, but things started becoming too small to read.
-
-- For PP3, when using a helper `clear()` function, any text above the height of the terminal does not clear, and remains when you scroll up.
-
-    ![screenshot](documentation/unfixed-bug02.png)
-
-    - Attempted fix: I tried to adjust the terminal size, but it only resizes the actual terminal, not the allowable area for text.
-
-- When validating HTML with a semantic `section` element, the validator warns about lacking a header `h2-h6`. This is acceptable.
-
-    ![screenshot](documentation/unfixed-bug03.png)
-
-    - Attempted fix: this is a known warning and acceptable, and my section doesn't require a header since it's dynamically added via JS.
-
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-If you legitimately cannot find any unfixed bugs or warnings, then use the following sentence:
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-There are no remaining bugs that I am aware of.
+<!-- unfixed bugs -->
