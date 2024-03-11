@@ -196,8 +196,6 @@ Defensive programming was manually tested with the below user acceptance testing
 
 ## User Story Testing
 
-### New Site Users
-
 | User Story | Screenshot |
 | --- | --- |
 | As a new site user, I would like to register for an account, so that I can have my own account. | ![screenshot](documentation/register.jpg) |
