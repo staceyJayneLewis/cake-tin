@@ -154,28 +154,6 @@ I've tested my deployed project using the Lighthouse Audit tool to check for any
 
 ## Defensive Programming
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-Defensive programming (defensive design) is extremely important!
-
-When building projects that accept user inputs or forms, you should always test the level of security for each.
-Examples of this could include (not limited to):
-
-- Users cannot submit an empty form
-- Users must enter valid email addresses
-- Users must enter a valid letter/word/string when prompted
-- Users must choose from a specific list only
-- Users cannot brute-force a URL to navigate to a restricted page
-- Users cannot perform CRUD functionality while logged-out
-- User-A should not be able to manipulate data belonging to User-B, or vice versa
-- Non-Authenticated users should not be able to access pages that require authentication
-- Standard users should not be able to access pages intended for superusers
-
-
-Use the table below as a basic start, and expand on it using the logic above.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
 Defensive programming was manually tested with the below user acceptance testing:
 
 | Page | Expectation | Test | Result | Fix | Screenshot |
@@ -331,7 +309,7 @@ If user is not logged in it should prompt user to sign in or register if they wo
 
     ![screenshot](documentation/bug14.png)
 
-    - To fix this, an if statement in the success toaster code for when the total amount of items is above 0.
+    - To fix this, adding an if statement in the success toaster code for when the total amount of items is above 0.
 
 - AuthenticationError at /checkout/
 
